@@ -1,0 +1,186 @@
+/*商品栏*/
+
+@mainColor: #ff841d;
+@bgc: #ededed;
+h3 {
+    font-family: "宋体";
+}
+
+
+.category {
+    /*商品导航栏*/
+    .category-title {
+        padding: 0 0.25rem;
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ccc;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+        a {
+            color: #000;
+            height: 0.95rem;
+            line-height: 0.95rem;
+            font-size: 0.35rem;
+        }
+    }
+    // 十大品牌排行列表
+    .category-list {
+        margin: 0.25rem 0;
+        font-size: 0.4rem;
+        background-color: #f1f1f1;
+        >li {
+            // 标题
+            >.category-list-hd {
+                display: block;
+                height: 1.0rem;
+                line-height: 1.0rem;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                padding-left: 0.375rem;
+                font-size: 0.4rem;
+                color: #000;
+                font-weight: bold;
+                color: #874604;
+            }
+            // 品牌详情
+            >.category-list-info {
+                >li {
+                    padding: 0.2rem;
+                    border-bottom: 1px solid #dedede;
+                    >a {
+                        display: block;
+                        background: url(../ty-images/rightarrow.png) no-repeat right center/0.6rem 0.6rem;
+                        // 排行序号
+                        .brand-rank {
+                            padding: 0 0.175rem;
+                            background-color: #ccc;
+                            color: #fff;
+                            margin-right: 0.25rem;
+                        }
+                        // 内容介绍
+                        .brand-info {
+                            >h3 {
+                                font-size: 0.4rem;
+                                line-height: 0.5rem;
+                                color: #000;
+                            }
+                            >p {
+                                font-size: 0.3rem;
+                                line-height: 0.5rem;
+                                color: #999;
+                            }
+                        }
+                    }
+                }
+                // 改变前三名的序列号颜色
+                li:nth-of-type(1) .brand-rank {
+                    background-color: red;
+                }
+                li:nth-of-type(2) .brand-rank {
+                    background-color: orange;
+                }
+                li:nth-of-type(3) .brand-rank {
+                    background-color: yellowgreen;
+                }
+                //去掉最后一个li的底边框
+                li:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+        // 销量详情
+        .sale-list>.category-list-info {
+            >li {
+                >a {
+                    background: none;
+                    >img {
+                        width: 3.75rem;
+                        height: 3.75rem;
+                        float: left;
+                    }
+                    >.brand-info {
+                        overflow: hidden;
+                        padding: 0 0.25rem;
+                        >h3 {
+                            font-size: 0.35rem;
+                            margin-bottom: 0.75rem;
+                        }
+                        .other {
+                            >p {
+                                color: #EA3900;
+                                font-size: 0.5rem;
+                                font-weight: bold;
+                            }
+                            >em {
+                                font-size: 0.3rem;
+                                color: #999;
+                            }
+                        }
+                        .stars {
+                            font-size: 0.5rem;
+                            color: @mainColor;
+                        }
+                    }
+                }
+            }
+        }
+        // 评价详情
+        .comment-list>.category-list-info {
+            >li {
+                >.goods {
+                    >a {
+                        >img {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            float: left;
+                            vertical-align: middle;
+                        }
+                        >h3 {
+                            overflow: hidden;
+                            font-size: 0.4rem;
+                            padding-left: 0.25rem;
+                            color:#999;
+                        }
+                    }
+                }
+                >.comment {
+                    margin-top: 0.25rem;
+                    padding: 0.125rem;
+                    background-color: #f8f8f8;
+                    border: 1px solid #dfdfdf;
+                    position: relative;
+                    .cname {
+                        line-height: 0.5rem;
+                        font-size: 0.35rem;
+                        font-family: "宋体";
+                        color: #555;
+                        span {
+                            margin-left: 0.2rem;
+                            font-size: 0.4rem;
+                            color: @mainColor;
+                        }
+                    }
+                    .cdate {
+                        line-height: 0.5rem;
+                        color: #999;
+                        font-size: 0.35rem;
+                    }
+                    .comment-mess{
+                        margin-top: 0.25rem;
+                        color: #333;
+                        font-size: 0.35rem;
+                    }
+                }
+                .comment::before {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    left: 0.75rem;
+                    top: -0.2rem;
+                    border-bottom: 0.2rem solid #f8f8f8;
+                    border-left: 0.2rem solid transparent;
+                    border-right: 0.2rem solid transparent;
+                }
+            }
+        }
+    }
+}

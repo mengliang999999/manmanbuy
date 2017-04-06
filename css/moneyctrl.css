@@ -1,0 +1,198 @@
+.ManManBuy {
+  min-width: 300px;
+  max-width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.cover {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+}
+.cover .load-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -80%);
+}
+.cover .load-img img {
+  width: 8rem;
+}
+header {
+  height: 2.2rem;
+  background: #ff841d;
+}
+header .row .back-index {
+  width: 15%;
+  height: 2.2rem;
+  float: left;
+}
+header .row .back-index a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 2.2rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+header .row .discount {
+  width: 70%;
+  height: 2.2rem;
+  float: left;
+}
+header .row .discount h1 {
+  text-align: center;
+  line-height: 1.8rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+header .row .app1-down {
+  width: 15%;
+  height: 2.2rem;
+  float: left;
+}
+header .row .app1-down a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+header .row .app1-down a img {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-top: 0.25rem;
+}
+.main {
+  margin-top: 0.8rem;
+  padding: 0 0.3rem;
+}
+.main .media-left img {
+  width: 5rem;
+  height: 5rem;
+}
+.main .media-body h4 {
+  font-size: 16px;
+  color: #333;
+  line-height: 20px;
+}
+.main .media-body h4 span {
+  color: #ff841d;
+}
+.main .media-body .other {
+  color: #a1a1a1;
+}
+.main .media-body .other #talk {
+  width: 12px;
+  height: 12px;
+}
+.main .media-body .other em {
+  margin-top: -0.15rem;
+  margin-left: 0.15rem;
+}
+.media > a {
+  display: block;
+  width: 100%;
+  height: 5rem;
+}
+.page {
+  margin: 1.3rem 0;
+  padding: 0 0.3rem;
+}
+.page a {
+  display: block;
+  width: 4.2rem;
+  height: 1.65rem;
+  line-height: 1.65rem;
+  font-size: 0.7rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #d4d4d4;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+  background: -moz-linear-gradient(top, #f1f1f1, #d4d4d4);
+  background: -o-linear-gradient(top, #f1f1f1, #d4d4d4);
+  border-bottom: 1px solid #bababa;
+  box-shadow: 0 0 1px #666;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  color: #000;
+}
+.page .sel {
+  width: 6.4rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  padding-left: 2rem;
+  text-align: center;
+  border: 1px solid #bababa;
+  font-size: 0.8rem;
+  float: left;
+  margin-left: 0.28rem;
+}
+.backIndex {
+  width: 100%;
+  height: 1.9rem;
+  line-height: 1.9rem;
+  text-align: left;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background: -o-linear-gradient(top, #ffffff, #ebebeb);
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  padding-left: 0.5rem;
+}
+.backIndex > a {
+  color: #000;
+  display: block;
+  font-size: 0.7rem;
+}
+.backIndex span {
+  color: #000;
+  font-size: 0.7rem;
+}
+.member > table {
+  border: none;
+  margin: 0;
+  background: #EFEFEF;
+}
+.member > table tr td {
+  text-align: center;
+  font-size: 14px;
+  padding: 0!important;
+}
+.member > table tr td a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem;
+  color: #5a5a5a;
+}
+.member > table tr .login {
+  border-left: none;
+}
+.member > table tr .back {
+  border-right: none;
+}
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #EFEFEF;
+}
+.app-down {
+  width: 3rem;
+  height: 3.35rem;
+  position: fixed;
+  right: 0;
+  bottom: 1.5rem;
+  z-index: 1000;
+}

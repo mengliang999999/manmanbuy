@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homePageUrl="http://yoursite.com/yourPage.html" homePageName="回到我的主页"></script>
+    <!--<style>
+        @media (min-width:670px){
+   html {
+    font-size:40px;
+   }
+}
+@media (min-width:320px) and (max-width:450px){
+   html {
+    font-size:20px;
+   }
+}
+@media (min-width:450px) and (max-width:670px){
+   html {
+    font-size:30px;
+   }
+}
+        * {  margin: 0;  padding: 0; }
+         body,html { background-color: #282c34;}
+         img { width: 100%; }
+         span { position: fixed; left: 50%; top: 10%; color: #FFF;  font-weight: bold;  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);  font-size: 0.833333333rem; }
+    </style>-->
+</head>
+
+<body>
+    <!--<img src="../images/404.jpg" alt="404">
+    <span></span>-->
+    <script>
+        var span = document.querySelector('title');
+        console.log(span)
+        var i = 6;
+        var o = setInterval(function () {
+            i--;
+            if (i === 0) {
+                clearInterval(o);
+            }
+            span.innerHTML = i + '返回上一页';
+        }, 1000);
+        function go() {
+            window.history.go(-1);
+        }
+        setTimeout("go()", 6500);
+    </script>
+</body>
+
+</html>

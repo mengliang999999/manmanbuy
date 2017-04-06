@@ -1,0 +1,335 @@
+.ManManBuy {
+    width: 100%;
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-top: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.toggleDown {
+    height: 8.15rem;
+    overflow: hidden;
+}
+
+.slide {}
+
+.weui-pull-to-refresh-layer {
+    font-size: 0.8rem;
+}
+
+@colors: #FF841D;
+// 头部start
+.ManManBuy {
+    >header {
+        width: 100%;
+        min-width: 300px;
+        max-width: 640px;
+        height: 2.5rem;
+        position: absolute;
+        top: 0px;
+        z-index: 100;
+        background: @colors;
+        border-bottom: 1px solid #e6e6e6;
+    }
+}
+
+.header-logo {
+    padding: 0.6rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    >a {
+        img {
+            width: 9.25rem;
+            height: 1.25rem;
+        }
+    }
+}
+
+.header-down {
+    padding: 0.35rem;
+    >a {
+        >img {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+    }
+}
+
+// 头部end
+#slide {
+    width: 100%;
+}
+
+// 搜索start
+.search {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #E6E6E6;
+    padding-top: 0.45rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    form {
+        width: 100%;
+        padding: 0rem 0.5rem;
+        margin-bottom: 0.5rem;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        margin-top: 0.5rem;
+        position: relative;
+        img {
+            width: 0.75rem;
+            height: 0.75rem;
+            position: absolute;
+            top: 0.4rem;
+            right: 4.15rem;
+            display: none;
+        }
+        input {
+            width: 100%;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            font-size: 0.8rem;
+            background: #F1F1F1;
+            border-radius: 0.9rem;
+            padding: 0.25rem 0;
+            padding-left: 0.75rem;
+            outline: none;
+        }
+        .search-btn {
+            position: absolute;
+            top: 0px;
+            right: 0.55rem;
+            width: 3.15rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            color: #fff;
+            background: @colors;
+            border-radius: 0.8rem;
+            outline: none;
+            border: none;
+            font-size: 0.8rem;
+        }
+        .searchBox {
+            width: 100%;
+            padding: 0 0.5rem;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            z-index: 100;
+            .searchContent {
+                width: 100%;
+                background: #F9FAD2;
+                border-radius: 0.5rem;
+                ul {
+                    li {
+                        padding: 0.1rem 0.8rem;
+                        border-sizing: border-box;
+                        -webkit-border-sizing: border-box;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 搜索end
+// 导航start
+nav {
+    padding: 0.6rem 0;
+    background: #fff;
+    min-width: 300px;
+    max-width: 640px;
+    >.row {
+        // padding-top: 0.1rem;
+        // padding-bottom: 0.8rem;
+        text-align: center;
+        >.area-item {
+            display: inline-block;
+            width: 25%;
+            height: 3.5rem;
+            float: left;
+            text-align: center;
+            margin-top: 0.4rem;
+        }
+        .links {
+            display: inline-block;
+            text-align: center;
+            p {
+                width: 100%;
+                text-align: center;
+                color: #666;
+                font-size: 0.6rem;
+                padding: 0.25rem 0;
+            }
+            .father-img {
+                img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+// 导航end
+// 超值start
+.superValue {
+    width: 100%;
+    height: 1.8rem;
+    background-color: #ff9000;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+    >.recommend {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        padding: 0 0.5rem;
+        span {
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 0.15rem;
+        }
+        .sanjiao {
+            width: 0.6rem;
+            height: 0.6rem;
+            float: right;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            margin-top: 0.55rem;
+            margin-right: 0.5em;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+        }
+    }
+}
+
+// 超值end
+// 商品start
+.main {
+    margin-top: 0.8rem;
+    padding: 0 0.3rem;
+    display: none;
+    .media-left {
+        img {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+    .media-body {
+        h4 {
+            font-size: 16px;
+            color: #333;
+            line-height: 20px;
+            span {
+                color: @colors;
+            }
+        }
+        .other {
+            color: #a1a1a1;
+            #talk {
+                width: 12px;
+                height: 12px;
+            }
+            em {
+                margin-top: -0.15rem;
+                margin-left: 0.15rem;
+            }
+        }
+    }
+}
+
+.media {
+    >a {
+        display: block;
+        width: 100%;
+        height: 5rem;
+    }
+}
+
+// 商品end
+// 更多优惠信息start
+.more-super {
+    display: block;
+    width: 100%;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    padding: 0.8rem 0.5rem;
+    color: #333;
+    margin: 0 auto;
+    p {
+        text-align: center;
+        width: 100%;
+        height: 1.7rem;
+        ;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #F4F4F4;
+        background-image: gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+        font-size: 13px;
+    }
+}
+
+// 更多优惠信息end
+// 品牌排行start
+.brand {
+    margin-top: 1.55rem;
+}
+
+// 品牌排行end
+// 登录注册start
+.member {
+    margin-top: 0.5rem;
+    >table {
+        border: none;
+        margin: 0;
+        background: #EFEFEF;
+        tr {
+            td {
+                text-align: center;
+                font-size: 14px;
+                padding: 0!important;
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.4rem;
+                    color: #5a5a5a;
+                }
+            }
+            .login {
+                border-left: none;
+            }
+            .back {
+                border-right: none;
+            }
+        }
+    }
+}
+
+// 登录注册end
+//页尾satrt
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #EFEFEF;
+}
+
+// 页尾end
+// app下载satrt
+.app-down {
+    width: 3rem;
+    height: 3.35rem;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0px;
+}
+
+// app下载end

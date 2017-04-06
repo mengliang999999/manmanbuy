@@ -1,0 +1,95 @@
+/* 头部 header */
+* {
+  box-sizing: border-box;
+}
+#header {
+  height: 1.1rem;
+  background: #f4483e;
+  border-bottom: 1px solid #e6e6e6;
+}
+#header .head {
+  height: 1.1rem;
+}
+#header .head .back {
+  width: 1.25rem;
+}
+#header .head .back a {
+  display: block;
+  width: 100%;
+}
+#header .head .back a img {
+  width: 0.625rem;
+  margin-top: 0.25rem;
+  margin-left: 0.35rem;
+}
+#header .head h1 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  text-align: center;
+  font-size: 0.5rem;
+  color: white;
+  font-weight: bold;
+}
+#header .head .home {
+  width: 1.25rem;
+}
+#header .head .home a {
+  display: block;
+  height: 1.1rem;
+  background: url(../images/header_app.png) no-repeat center / 0.8rem;
+}
+/*右侧固定app下载*/
+.fixedapp {
+  position: fixed;
+  bottom: 0.75rem;
+  right: 0.025rem;
+  z-index: 999;
+}
+.fixedapp a {
+  width: auto;
+}
+.fixedapp a img {
+  width: 1.5rem;
+}
+/* 底部 footer */
+.footer .footer-top {
+  height: 0.85rem;
+  line-height: 0.85rem;
+  background: #efefef;
+  border-bottom: 1px solid #c4c4c4;
+  border-top: 1px solid #c4c4c4;
+}
+.footer .footer-top a {
+  width: 30%;
+  float: left;
+  text-align: center;
+  font-size: 0.35rem;
+  color: #000;
+  border-right: 1px solid #c4c4c4;
+}
+.footer .footer-top a:last-of-type {
+  width: 40%;
+  border: none;
+}
+.footer .footer-top a:last-of-type img {
+  display: inline-block;
+  width: 0.375rem;
+  height: 0.375rem;
+  vertical-align: middle;
+  margin-top: -0.125rem;
+  margin-right: -0.05rem;
+}
+.footer .footer-copyright {
+  text-align: center;
+  color: #666;
+  font-size: 0.3rem;
+  padding: 0.3rem 0;
+}
+.footer .footer-copyright a:nth-of-type(1) {
+  color: red;
+}
+.footer .footer-copyright a:nth-of-type(2) {
+  color: #000;
+}

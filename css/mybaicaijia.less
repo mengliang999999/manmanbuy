@@ -1,0 +1,256 @@
+html,
+body {
+    background: #eee;
+}
+
+.ManManBuy {
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+@colors: #F4483E;
+// 頭部start
+header {
+    height: 2.2rem;
+    background: @colors;
+    overflow: hidden;
+    .row {
+        .back-index {
+            width: 15%;
+            height: 2.2rem;
+            float: left;
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 2.2rem;
+                color: #fff;
+                font-size: 0.9rem;
+            }
+        }
+        .discount {
+            width: 70%;
+            height: 2.2rem;
+            float: left;
+            h1 {
+                text-align: center;
+                line-height: 1.8rem;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+        .app1-down {
+            width: 15%;
+            height: 2.2rem;
+            float: left;
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 1.7rem;
+                    height: 1.7rem;
+                    margin-top: 0.25rem;
+                }
+            }
+        }
+    }
+}
+
+//插件start
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    font-size: 14px;
+    height: 38px;
+    border-bottom: 2px solid #fff;
+}
+
+.swiper-slide.active {
+    border-bottom-color: #E4393C;
+}
+//插件end
+
+.main {
+    .media {
+        padding: 0.5rem 0.3rem;
+        background: #fff;
+        margin: 0.5rem 0;
+        .media-left {
+            a {
+                display: block;
+                width: 6.5rem;
+                height: 6.5rem;
+                img {
+                    width: 6.5rem;
+                    height: 6.5rem;
+                }
+            }
+        }
+        .media-body {
+            h4 {
+                font-size: 0.7rem;
+            }
+            .other {
+                .price {
+                    margin-top: 0.5rem;
+                    span {
+                        font-size: 1.1rem;
+                        color: #FC353A;
+                        em {
+                            font-size: 0.6rem;
+                        }
+                    }
+                    del {
+                        color: #a8a8a8;
+                        margin-left: 0.5rem;
+                        font-size:12px;
+                    }
+                }
+                .pro {
+                    margin-top: 0.5rem;
+                    .proNumber {
+                        display: inline-block;
+                        width: 4.1rem;
+                        height: 0.5rem;
+                        ;
+                        background: pink;
+                        line-height: 0.5rem;
+                        ;
+                        text-align: center;
+                        font-size: 0.6rem;
+                        color: #fff;
+                        border-radius: 0.3rem;
+                        border: 1px solid #FC353A;
+                        position: relative;
+                        overflow: hidden;
+                        em {
+                            display: inline-block;
+                            width: 1%;
+                            height: 0.7rem;
+                            background: #FC353A;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                    .number {
+                        font-size: 0.6rem;
+                        color: #FC353A;
+                        margin-left: 0.5rem;
+                    }
+                }
+                .links {
+                    margin-top: 0.5rem;
+                    .money {
+                        width: 5rem;
+                        height: 1.3rem;
+                        line-height: 1.3rem;
+                        text-align: center;
+                        display: inline-block;
+                        border: 1px dotted #FC353A;
+                        color: #FC353A;
+                        float: left;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        a{
+                           color:#FC353A; 
+                        }
+                    }
+                    .order {
+                        display: inline-block;
+                        width: 2.9rem;
+                        height: 1.4rem;
+                        line-height: 1.4rem;
+                        text-align: center;
+                        color: #fff;
+                        background: #FC353A;
+                        float: right;
+                        border-radius: 0.25rem;
+                        a{
+                            color:#fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 登录注册start
+.member {
+    // margin-top: 5rem;
+    >table {
+        border: none;
+        margin: 0;
+        background: #EFEFEF;
+        tr {
+            td {
+                text-align: center;
+                font-size: 14px;
+                padding: 0!important;
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.4rem;
+                    color: #5a5a5a;
+                }
+            }
+            .login {
+                border-left: none;
+            }
+            .back {
+                border-right: none;
+            }
+        }
+    }
+}
+
+// 登录注册end
+//页尾satrt
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #EFEFEF;
+}
+
+// 页尾end
+// app下载satrt
+.app-down {
+    width: 3rem;
+    height: 3.35rem;
+    position: fixed;
+    right: 0;
+    bottom: 1.5rem;
+    z-index: 1000;
+}
+
+// app下载endv

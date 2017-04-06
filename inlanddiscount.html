@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <!-- 引入fire样式  loading提示效果-->
+    <link id="fire" rel="stylesheet" href="css/fire.css" />
+    <!--清除初始样式-->
+    <link rel="stylesheet" href="css/m-base.css">
+    <link rel="stylesheet" href="css/DomesticDiscount.css">
+    <!--jQuery-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script type="text/html" id="template">
+        {{if result}} {{each result as value}}
+        <li>
+            <a href="DomesticDiscount-PD.html?productid={{value.productId}}">
+                {{#value.productImg}}
+                <p>{{value.productName}}</p>
+                <p>{{value.productPrice}}</p>
+                <p>{{value.productFrom}} | {{value.productTime}}</p>
+            </a>
+        </li>
+        {{/each}} {{/if}}
+        <!-- 页面加载失败了  -->
+        <a href="inlanddiscount.html">
+            <img src="images/error.jpg" alt="页面加载失败了..." id="error">
+        </a>
+    </script>
+</head>
+
+<body>
+    <!-- 页头 -->
+    <header class="header" id="header">
+        <div class="head">
+            <!--返回上一级-->
+            <div class="retreat">
+                <a href="index.html"><img src="images/icon-leftarrow.png" alt="返回上一页"></a>
+                <!-- http://m.manmanbuy.com/images/header_app.png -->
+            </div>
+            <!--APP下载-->
+            <div class="APPdownload">
+                <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"><img src="http://m.manmanbuy.com/images/header_app.png" alt="下载APP"></a>
+            </div>
+            <!--标题-->
+            <h1>国内折扣</h1>
+        </div>
+    </header>
+
+
+    <!--主要内容-折扣列表-->
+    <main class="main">
+        <ul class="discount-list clearfix" id="discount-list">
+        <span id="mask"></span>
+            <!-- 遮罩层和效果  loading提示效果-->
+            <div id="over-fire">
+                <!-- 容器 -->
+                <div id="fire-container" class="fire-container">
+                    <!-- 左边容器  -->
+                    <div class="fire-left">
+                        <!-- 左 -->
+                        <div class="main-fire"></div>
+                        <!-- 左颗粒 -->
+                        <div class="particle-fire"></div>
+                    </div>
+
+                    <!-- 中容器 -->
+                    <div class="fire-main">
+                        <!-- 中 -->
+                        <div class="main-fire"></div>
+                        <!-- 中颗粒 -->
+                        <div class="particle-fire"></div>
+                    </div>
+
+                    <!-- 右容器 -->
+                    <div class="fire-right">
+                        <!-- 右 -->
+                        <div class="main-fire"></div>
+                        <!-- 右颗粒 -->
+                        <div class="particle-fire"></div>
+                    </div>
+
+                    <!--内光模糊 -->
+                    <div class="fire-bottom">
+                        <div class="main-fire"></div>
+                    </div>
+                </div>
+                <div class="jiazz" id="jiazz">
+                    正在奔跑中<span>.</span><span>.</span><span>.</span>
+                </div>
+                <div id="over" class="over"></div>
+            </div>
+            <span id="cover-dis"></span>
+        </ul>
+    </main>
+
+
+    <!--页脚-->
+    <footer class="footer" id="footer">
+        <div class="footer-registration">
+            <a href="demo/404.html">登录</a>
+            <a href="demo/404.html">注册</a>
+            <a href="#" class="footer-registration-border"><img src="images/footer-top.jpg" alt="Top箭头" width="15px" height="15px">返回顶部</a>
+        </div>
+        <div class="copyright">
+            <p>
+                <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">手机APP下载</a>
+                <a href="index.html">慢慢买手机版</a> --掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+
+
+    <!-- loading提示效果 -->
+    <script src="js/loading.js"></script>
+    <!-- bootstrap js -->
+    <script src="lib/template/template.js"></script>
+    <!-- 引用 DomesticDiscount -->
+    <script src="./js/Domestic.js"></script>
+    <script src="js/DomesticDiscount.js"></script>
+</body>
+
+</html>

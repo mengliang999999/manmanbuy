@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <style>
+        #snowflake {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .snowRoll {
+            position: absolute;
+            opacity: 0;
+            -webkit-animation-name: mysnow;
+            -webkit-animation-duration: 20s;
+            -moz-animation-name: mysnow;
+            -moz-animation-duration: 20s;
+            height: 80px;
+        }
+
+        @-webkit-keyframes mysnow {
+            0% {
+                bottom: 100%;
+            }
+            50% {
+                -webkit-transform: rotate(1080deg);
+            }
+            100% {
+                -webkit-transform: rotate(0deg) translate3d(50px, 50px, 50px);
+            }
+        }
+
+        @-moz-keyframes mysnow {
+            0% {
+                bottom: 100%;
+            }
+            50% {
+                -moz-transform: rotate(1080deg);
+            }
+            100% {
+                -moz-transform: rotate(0deg) translate3d(50px, 50px, 50px);
+            }
+        }
+    </style>
+    <!-- rem随页面改变HTML字体大小 -->
+    <script src="lib/rem/rem.js"></script>
+    <!-- bootstraps css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/m-base.css"/>
+    <!-- less文件导入 -->
+    <link rel="stylesheet" type="text/less" href="css/productlist.less">
+    <!-- 解析less的js -->
+    <script src="lib/less/less.min.js"></script>
+    <!-- 响应式布局兼容写法 -->
+    <!--[if lte IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+<body style="overflow: hidden">
+<!--正在加载 遮罩-->
+<div class="mask" style="position: absolute;width: 100%;height: 100%;z-index: 9999999999;background:rgba(0,0,0,0.5)">
+    <img src="images/jiazai.gif" style="width: 50%; position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%)" alt=""/>
+</div>
+<!--撒花容器-->
+<div id="content">
+    <div id="snowflake"></div>
+</div>
+<!--头部-->
+<header>
+    <div class="fl header-logo">
+        <a href="javascript:;">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="fr header-down">
+        <a href="javascript:;">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<header style='position: absolute;left: 0;opacity: 0;top:0;z-index: 999999'>
+    <div class="fl header-logo">
+        <a href="index.html">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="fr header-down">
+        <a href="http://m.manmanbuy.com/?o=download">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<div class="productlistnav">
+    <a href="index.html">首页</a>>
+    <a href="category.html">全部分类</a>>
+    <a href="#" class="list-title3"></a>
+    <!-- 筛选-->
+    <a class="btn btn-primary fr" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        筛选
+    </a>
+    <div class="collapse" id="collapseExample">
+        <div class="well">
+            <button type="button" style=" width: 60px;height: 30px;padding: 0;" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+               全部删除
+            </button><br/>
+            <div></div>
+            <input type='radio' name="bao" id="one"/><lable for='one'>包邮</lable>包邮
+            <input type='radio' name="bao" id="two"/><lable for='two'>不包邮</lable> <br/>
+            <input type='checkbox' id="three"/><lable for='three'>液晶电视</lable><br>
+            <input type='checkbox' id="four"/><lable for='four'>大屁股电视</lable><br>
+            <input type='checkbox' id=" five"/><lable for='five'>4K电视</lable><br>
+            <input type='checkbox' id="six"/><lable for='six'>3D电视</lable><br>
+            <input type='checkbox' id="seven"/><lable for='seven'>家庭智能电视</lable>
+        </div>
+    </div>
+</div>
+<img id="zaijiaerror" src="images/error.jpg" style="display: none" alt=""/>
+<a id="update" href="" style='display: none;width: 100%;height: 30px;background-color: #fff;color:mediumvioletred;text-align: center '>重新加载</a>
+<div class="foodlist">
+    <ul>
+
+    </ul>
+</div>
+<div class="clearfix page" style='display: none'>
+    <div class="fcpage">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="checkbox" autocomplete="off" checked>上一页
+            </label>
+        </div>
+    </div>
+    <!--<span class="w33"><a href="javascript:;">上一页</a></span>-->
+    <span class="w33">
+    <select name="select" selected="">
+        <option value="1"
+                selected="">1/3
+        </option>
+        <option value="2">2/3</option>
+        <option value="3">3/3</option>
+    </select></span>
+    <!--<span class="w33"><a href="javascript:;">下一页</a>-->
+    <div class="fcpage">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="checkbox" autocomplete="off" checked>下一页
+            </label>
+        </div>
+    </div>
+</div>
+<!--页脚-->
+<!--登录注册start-->
+<div class="member">
+    <table class="table table-bordered">
+        <tr>
+            <td class="login"><a href="javascript:;">登录</a></td>
+            <td><a href="javascript:;">注册</a></td>
+            <td class="back"><a href="#content"><i class="glyphicon glyphicon-arrow-up"></i> 返回顶部</a></td>
+        </tr>
+    </table>
+</div>
+<!--登录注册end-->
+<!--页脚-->
+<footer>
+    <p>
+        <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">慢慢买手机版</a>				-- 掌上比价平台
+    </p>
+    <p>
+        m.manmanbuy.com
+    </p>
+</footer>
+</body>
+<script type="text/html" id="productlist">
+    {{each result as value i}}
+    <li>
+        <a href="bijia.html?productid={{value.productId}}&category={{url()}}">
+            <div class="pic">{{#value.productImg}}</div>
+            <div class="info">
+                <div class="tit">{{value.productName}}</div>
+                <div class="price"><em>{{value.productPrice}}</em><span class="star"><em class="star5"></em></span>
+                </div>
+                <div class="other"><em>{{value.productQuote}}</em><em>{{value.productCom}}</em></div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery.transit.js"></script>
+
+<!-- 腾讯模板 -->
+<script src="lib/template/template.js"></script>
+<!-- bootstrap js -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- 动画方式 -->
+<script src="lib/gdsmith-jquery.easing-82496a9/jquery.easing.1.1.1.js"></script>
+<!-- 画布框架 -->
+<script src="lib/Konvas/konva.min.js"></script>
+<!-- 懒加载 -->
+<script src="lib/jquery/jquery.lazyload.min.js"></script>
+<script src="lib/jquery/jquery.scrollstop.min.js"></script>
+<script src="js/productlist.js"></script>
+<script>
+    template.helper('url',url);
+    function url(){
+      return  fc.getUrlParam('category');
+    }
+</script>
+</html>

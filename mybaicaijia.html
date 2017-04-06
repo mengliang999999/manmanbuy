@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>白菜价-淘宝内部券</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!--css文件-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/Swiper-3.2.5/Swiper-3.2.5/dist/css/swiper.css">
+    <link rel="stylesheet" href="css/m-base.css">
+    <link rel="stylesheet" href="css/mybaicaijia.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <span id="over-fire"></span>
+    <!--<div class="cover" id="cover-dis">
+        <div class="load-img">
+            <img src="images/wait.gif" alt="">
+        </div>
+    </div>-->
+    <div id="backTop"></div>
+    <div class="ManManBuy">
+        <!--頭部start-->
+        <header>
+            <div class="row">
+                <div class="back-index"><a href="index.html"><i class="glyphicon glyphicon-menu-left"></i></a></div>
+                <div class="discount">
+                    <h1>白菜价-淘宝内部券</h1>
+                </div>
+                <div class="app1-down">
+                    <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');">
+                        <img src="images/header_app.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!--頭部end-->
+
+        <!-- Swiper -->
+        <div class="swiper-container" id="swiper-nav">
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="main" id="mainContent">
+
+        </div>
+        <!--登录注册start-->
+        <div class="member">
+            <table class="table table-bordered">
+                <tr>
+                    <td class="login"><a href="javascript:;">登录</a></td>
+                    <td><a href="javascript:;">注册</a></td>
+                    <td class="back"><a href="#backTop"><i class="glyphicon glyphicon-arrow-up"></i> 返回顶部</a></td>
+                </tr>
+            </table>
+        </div>
+        <!--登录注册end-->
+
+        <!--页尾satrt-->
+        <footer>
+            <p>
+                <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a>                <a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </footer>
+        <!--app下载start-->
+        <div class="app-down">
+            <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');">
+                <img src="images/app-down.png" alt="">
+            </a>
+        </div>
+        <!--app下载end-->
+
+    </div>
+    <script type="text/html" id="swiperTmp">
+        <ul class="swiper-wrapper" id="navList">  
+            {{each result as value i}}
+                <li class="swiper-slide" data-titleId="{{value.titleId}}">{{value.title}}</li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <script type="text/html" id="contentTmp">
+            {{each result as value i}}
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="javascript:;">
+                            {{#value.productImg}}
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{#value.productName}}</h4>
+                        <div class="other">
+                            <p class="price"><span>{{#value.productPrice}}</span></p>
+                                <p class="pro"><span class="proNumber"><em></em>1%</span><span class="number">已领82张</span></p>
+                                <div class="links">
+                                    <p href="javascript:;" class="money">{{#value.productCoupon}}</p>
+                                    <p href="javascript:;" class="order">{{#value.productHref}}</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+    </script>
+
+    <!--js文件-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/template/template.js"></script>
+    <script src="lib/Swiper-3.2.5/Swiper-3.2.5/dist/js/swiper.js"></script>
+    <script src="lib/rem/rem.js"></script>
+    <!--<script src="js/loading.js"></script>-->
+    <script src="js/my-baicaijia.js"></script>
+</body>
+
+</html>

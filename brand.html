@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>十大品牌列表页</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- px转rem的js引包 -->
+    <script src="lib/rem/rem1.js"></script>
+    <!-- bootstrap 的css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/m-base.css">
+    <link rel="stylesheet/less" href="css/tycommon.less">
+    <!-- 该页面的less -->
+    <link rel="stylesheet/less" type="" href="css/brand.less">
+    <!-- less.js在线翻译 -->
+    <script src="lib/less/less.min.js"></script>
+    <!-- ie9以下的兼容性 -->
+    <!--[if lte IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+   <!-- 头部区域 -->
+<header id="header">
+    <a href="index.html" class="logo"><img src="images/header_logo.png" alt=""></a>
+    <a href="http://m.manmanbuy.com/?o=download"  class="app">
+        <img src="images/header_app.png" alt="">
+    </a>
+</header>
+<!-- 搜索区域 -->
+<section id="search">
+    <!-- 在两个input外面套一个form表单 一是 语义角度 二是布局的角度 -->
+    <form action="#">
+        <!-- type=search 当点击搜索框的时候输入法右下角 变成搜索 -->
+        <input type="search" name="" id="txt" placeholder="请输入要比价的商品">
+        <input type="submit" value="搜索" id="sub">
+
+        <div id="info"></div>
+    </form>
+    <img src="images/delete.png" alt="" class="cha"/>
+
+</section>
+    <!-- 商品栏 -->
+    <section class="category">
+        <!-- 商品导航栏 -->
+        <nav class="category-title">
+            <!-- 注意最后跳转的页面   需更改 -->
+            <a href="index.html">首页></a><a href="brandTitle.html">全部分类></a>
+            <a href="javascript:;" id="brandNav"></a>
+        </nav>
+        <!-- 十大品牌排行列表 -->
+        <ul class="category-list">
+            <li class="brand-list">
+                <!-- 品牌标题 -->
+                <a href="javascript:;" class="category-list-hd"></a>
+                <!-- 十大品牌排序详情 -->
+                <ul class="category-list-info hide">
+                </ul>
+            </li>
+            <li class="sale-list">
+                <!-- 产品销量标题 -->
+                <a href="javascript:;" class="category-list-hd"></a>
+                <!-- 产品销量排行 -->
+                <ul class="category-list-info hide">
+                </ul>
+            </li>
+            <li class="comment-list">
+                <!-- 最新评价标题 -->
+                <a href="javascript:;" class="category-list-hd"></a>
+                <!-- 最新评价详情 -->
+                <ul class="category-list-info hide">
+
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- 右侧固定app下载 start-->
+    <div class="fixedapp">
+        <a href="http://m.manmanbuy.com/?o=download">
+            <img src="ty-images/app-down.png" alt="app下载" />
+        </a>
+    </div>
+    <!-- 右侧固定app下载 end-->
+    <!-- 底部区域 -->
+    <div class="footer">
+        <div class="foot_t">
+            <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+            <a href="http://m.manmanbuy.com/reg.aspx">注册</a>
+            <a href="#header" style="width:40%;border: 0;">
+                <img src="images/top.jpg" /> 返回顶部
+            </a>
+        </div>
+        <div class="foot_b">
+            <p>
+                <a href="http://m.manmanbuy.com/?o=download" id="app">手机APP下载</a>
+            <a href="http://m.manmanbuy.com" id="phone">慢慢买手机版</a>
+            -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+    <!-- 模板 -->
+    <!-- 品牌排行 -->
+    <script type="text/html" id="brandInfo">
+        {{each result as value i}}
+        <li>
+            <!-- 链接到商品详情列表 -->
+            <a href="bijia.html?productid={{value.categoryId}}&category={{value.tit}}&{{getUrlId()}}" class="clearfix">
+                <!-- 排行序号 -->
+                <div class="brand-rank fl">{{i+1}}</div>
+                <div class="brand-info fl">
+                    <h3>{{value.brandName}}</h3>
+                    <p>{{value.brandInfo}}</p>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 销量排行 -->
+    <script type="text/html" id="saleInfo">
+        {{each result as value i}}
+        <li>
+            <!-- 链接到该产品的商品详情页 -->
+            <a href="bijia.html?productid={{value.productListId}}&category={{value.tit}}&{{getUrlId()}}" class="clearfix">
+                <!-- 图片 -->
+                {{#value.productImg}}
+                <!-- 信息 -->
+                <div class="brand-info">
+                    <h3>{{value.productName}}</h3>
+                    <div class="other fl">
+                        <p>{{value.productPrice}}</p>
+                        <em>{{value.productQuote}}</em>
+                        <em>{{value.productCom}}</em>
+                    </div>
+                    <!-- 评价 -->
+                    <div class="stars fr">★★★★☆</div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 最新评价 -->
+    <script type="text/html" id="commentInfo">
+        {{each result as value i}}
+        <li>
+            {{if i==0}}
+            <div class="goods">
+                <a href="bijia.html?productid=1&category={{value.tit}}&{{getUrlId()}}" class="clearfix"> {{#value.img }}
+                    <h3> {{ value.name }}</h3>
+                </a>
+            </div>
+            {{/if}}
+            <div class="comment">
+                <div class="comment-name clearfix">
+                    <div class="cname fl">{{value.comName}}:<span>★★★☆☆</span></div>
+                    <div class="cdate fr">{{value.comTime}}</div>
+                </div>
+                <div class="comment-mess">{{value.comContent}}</div>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+</body>
+<!-- jq 引包-->
+<script src="lib/jquery/jquery.min.js"></script>
+<!-- 懒加载 js -->
+<script src="lib/jquery/jquery.lazyload.min.js"></script>
+<!-- bootstrap js -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- 模板js -->
+<script src="lib/template/template.js"></script>
+<!-- 该页面的js -->
+<script src="js/brand.js"></script>
+
+</html>

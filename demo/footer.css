@@ -1,0 +1,62 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 30px;
+}
+@media (max-width: 640px) {
+  html {
+    font-size: 20px;
+  }
+}
+/* 页脚 */
+/* 登录 注册 返回顶部 版权*/
+.footer {
+  background-color: #efefef;
+  width: 100%;
+  height: 100%;
+}
+.footer .footer-registration {
+  width: 100%;
+  height: 1.416666667rem;
+  background-color: #efefef;
+  border-top: 1px solid #c4c4c4;
+}
+.footer .footer-registration a {
+  font-size: 0.583333333rem;
+  display: inline-block;
+  width: 32.333333%;
+  height: 1.416666667rem;
+  text-align: center;
+  color: #000;
+  line-height: 1.416666667rem;
+  border-right: 0.041666667rem solid #c4c4c4;
+  vertical-align: middle;
+}
+.footer .footer-registration .footer-registration-border {
+  border: none;
+}
+.footer .footer-registration .footer-registration-border img {
+  width: 0.625rem;
+  height: 0.625rem;
+  display: inline-block;
+  margin-right: 0.083333333rem;
+}
+.footer .copyright {
+  font-size: 0.5rem;
+  padding: 0.625rem 0;
+  height: 2.5rem;
+  width: 100%;
+  text-align: center;
+  border-top: 0.041666667rem solid #c4c4c4;
+  color: #666;
+}
+.footer .copyright p a:nth-child(1) {
+  color: #fc0000;
+}
+.footer .copyright p a:nth-child(2) {
+  color: #000;
+}

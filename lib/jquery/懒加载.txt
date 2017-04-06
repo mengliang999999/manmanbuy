@@ -1,0 +1,65 @@
+# Lazy Load Plugin for jQuery
+
+Lazy Load delays loading of images in long web pages.
+懒加载延迟了长页面里面的图片展示。
+Images outside of viewport wont be loaded before user scrolls to them.
+可视窗口之外的图片一般会在用户滚动到它们的位置之前就加载这些图片。
+This is opposite of image preloading.
+这就是图片的预加载。
+
+Using Lazy Load on long web pages containing many large images makes the page load faster.
+在一个内容很多并且带有大量图片的页面中，使用懒加载会让页面加载的更快。
+Browser will be in ready state after loading visible images.
+浏览器会把所有的图片加载完成之后才进入ready状态。
+In some cases it can also help to reduce server load.
+在某些情况下它也能帮助减少服务端负载。
+Lazy Load is inspired by [YUI ImageLoader](http://developer.yahoo.com/yui/imageloader/) Utility by Matt Mlinac.
+
+## How to Use?
+
+Lazy Load depends on jQuery. Include them both in end of your HTML code:
+懒加载依赖jQuery。把下面这两个文件放到你的HTML代码最后面
+
+```
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.lazyload.js" type="text/javascript"></script>
+```
+
+You must alter your HTML code. URL of the real image must be put into data-original attribute.
+你必须修改你的HTML代码。真正的图片URL必须放到data-original属性中。
+It is good idea to give Lazy Loaded image a specific class.
+给需要懒加载的图片一个特殊的class是一个很好的想法。
+This way you can easily control which images plugin is binded to.
+通过这种方式，你可以轻松的控制哪些图片你需要让它懒加载。
+Note that you should have width and height attributes in your image tag.
+需要注意的是，你需要让你的image标签，带有width和height这两个属性。
+```
+<img class="lazy" data-original="img/example.jpg" width="640" height="480">
+```
+
+then in your code do:
+然后，在你的js代码中你需要这么做：
+```
+$("img.lazy").lazyload();
+```
+
+This causes all images of class lazy to be lazy loaded.
+这样就能实现所有带有lazy样式的图片被懒加载了。
+
+默认加载图片时出现在屏幕上。如果你想要图片加载之前使用临界值参数。临界值设置为200年导致图像加载之前出现在视窗200像素。
+
+$("img.lazy").lazyload({
+    threshold : 200
+});
+
+
+您可以使用jQuery点击或鼠标悬停等事件。您还可以使用定制的事件,。默认是等到用户向下滚动和形象出现在视窗。加载图片只有当用户点击他们你可以:
+
+$("img.lazy").lazyload({
+    event : "click"
+});
+默认插件等待形象完全加载和调用显示()。你可以使用任何你想要的效果。下面的代码使用渐显效果。这是演示页面。
+
+$("img.lazy").lazyload({
+    effect : "fadeIn"
+});

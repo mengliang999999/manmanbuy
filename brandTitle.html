@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>品牌大全</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- px转rem的js引包 -->
+    <script src="lib/rem/rem1.js"></script>
+    <!-- bootstrap 的css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="css/m-base.css">
+    <!-- 该页面的less -->
+    <link rel="stylesheet/less" href="css/tycommon.less">
+    <link rel="stylesheet/less" href="css/brandTitle.less">
+    <!-- less.js在线翻译 -->
+    <script src="lib/less/less.min.js"></script>
+    <!-- ie9以下的兼容性 -->
+    <!--[if lte IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="index.html" class="logo"><img src="images/header_logo.png" alt=""></a>
+        <a href="http://m.manmanbuy.com/?o=download" class="app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!-- 搜索区域 -->
+    <section id="search">
+        <!-- 在两个input外面套一个form表单 一是 语义角度 二是布局的角度 -->
+        <form action="#">
+            <!-- type=search 当点击搜索框的时候输入法右下角 变成搜索 -->
+            <input type="search" name="" id="txt" placeholder="请输入要比价的商品">
+            <input type="submit" value="搜索" id="sub">
+            <div id="info"></div>
+        </form>
+        <img src="images/delete.png" alt="" class="cha" />
+    </section>
+    <!-- 商品栏 -->
+    <section class="category">
+        <!-- 商品导航栏 -->
+        <nav class="category-title">
+            <a href="index.html">首页></a><a href="#">全部分类></a>
+        </nav>
+        <!-- 热门品牌排行 -->
+        <div class="category-hot">热门品牌排行</div>
+        <!-- 所有品牌大全 -->
+        <div class="rank clearfix">
+            <div id="mask">
+                <img src="ty-images/wait.gif" id="wait">
+            </div>
+        </div>
+    </section>
+    <!-- 右侧固定app下载 start-->
+    <div class="fixedapp">
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">
+            <img src="ty-images/app-down.png" alt="app下载" />
+        </a>
+    </div>
+    <!-- 右侧固定app下载 end-->
+    <!-- 底部区域 -->
+    <div class="footer">
+        <div class="foot_t">
+            <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+            <a href="http://m.manmanbuy.com/reg.aspx">注册</a>
+            <a href="#header" style="width:40%;border: 0;">
+                <img src="images/top.jpg" /> 返回顶部
+            </a>
+        </div>
+        <div class="foot_b">
+            <p>
+                <a href="http://m.manmanbuy.com/?o=download" id="app">手机APP下载</a>
+                <a href="http://m.manmanbuy.com" id="phone">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </div>
+    <!-- 模板 -->
+    <!-- 所有品牌大全 -->
+    <script type="text/html" id="brandTitle">
+        <ul>
+            {{each result as value i}}
+            <li>
+                <a href="{{'brand.html?brandtitleid='+value.brandTitleId}}">{{value.brandTitle}} </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+</body>
+<!-- jq 引包-->
+<script src="lib/jquery/jquery.min.js"></script>
+<!-- 懒加载 -->
+<script src="lib/jquery/jquery.lazyload.min.js"></script>
+<script src="lib/jquery/jquery.scrollstop.min.js"></script>
+<!-- bootstrap js -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- 模板js -->
+<script src="lib/template/template.js"></script>
+<!-- 该页面的js -->
+<script src="js/brandTitle.js"></script>
+
+</html>

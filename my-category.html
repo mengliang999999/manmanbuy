@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买比价网</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!--css文件-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/m-base.css">
+    <link rel="stylesheet" href="css/my-category.css">
+</head>
+
+<body>
+    <div id="backTop"></div>
+    <div class="ManManBuy">
+        <!--头部start-->
+        <header id="header">
+            <div class="fl header-logo">
+                <a href="javascript:;">
+                    <img src="images/header_logo.png" alt="">
+                </a>
+            </div>
+            <div class="fr header-down">
+                <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');">
+                    <img src="images/header_app.png " alt=" ">
+                </a>
+            </div>
+        </header>
+        <!--搜索start-->
+        <div class="search" id="search">
+            <form>
+                <img src="images/delete.png" alt=" " id="delete-img">
+                <input type="search" placeholder="请输入你想比价的商品" id="keyWord">
+                <button type="button" class="search-btn">搜索</button>
+                <div class="searchBox">
+                    <div class="searchContent">
+                        <ul class="searchList">
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--搜索end-->
+        <div class="content-list">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            </div>
+        </div>
+        <!--登录注册start-->
+        <div class="member">
+            <table class="table table-bordered">
+                <tr>
+                    <td class="login"><a href="javascript:; ">登录</a></td>
+                    <td><a href="javascript:;">注册</a></td>
+                    <td class="back"><a href="#backTop"><i class="glyphicon glyphicon-arrow-up"></i> 返回顶部</a></td>
+                </tr>
+            </table>
+        </div>
+        <!--登录注册end-->
+        <!--页尾satrt-->
+        <footer id="footer">
+            <p>
+                <a href="http://m.manmanbuy.com/?o=download " onclick="trackEvent( 'footer下载'); " style="color: Red;
+                    ">手机APP下载</a> <a href="http://m.manmanbuy.com ">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </footer>
+        <!--页尾end-->
+        <!--app下载start-->
+        <div class="app-down">
+            <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');">
+                <img src="images/app-down.png" alt=" ">
+            </a>
+        </div>
+        <!--app下载end-->
+    </div>
+    <script type="text/html" id="searchTmp">
+        {{each s as value i}}
+        <li>{{value}}</li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="contentTmp">
+        {{each result as value i}}
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="heading{{i}}" data-id="{{value.titleId}}">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}" aria-expanded="true" aria-controls="collapse{{i}}">
+                            {{value.title}}
+                            <span class="pull-right"><i class="glyphicon glyphicon-menu-down"></i></span>
+                            </a>
+                </h4>
+            </div>
+            <div id="collapse{{i}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{i}}" aria-expanded="false">
+                <div class="panel-body auto-slide ">
+                    <div class="row" id="rows">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/html" id="rowTmp">
+        {{each result as value i}}
+        <div class="col-xs-4">{{value.category}}</div>
+        {{/each}}
+    </script>
+    <!--js文件-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/rem/rem.js"></script>
+    <script src="js/my-category.js"></script>
+</body>
+
+</html>

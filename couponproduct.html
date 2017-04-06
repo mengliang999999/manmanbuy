@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="x-ua-compatible">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>肯德基优惠券--慢慢买</title>
+        <script src="./lib/rem/rem1.js"></script>
+        <link rel="shortcut icon" href="./images/favicon.ico">
+        <link rel="stylesheet" href="./css/m-base.css">
+        <link rel="stylesheet" href="./css/hqcommon.css">
+        <link rel="stylesheet" href="./css/couponproduct.css">
+        <!-- <script src="./lib/less/less.min.js"></script> -->
+        <!--[if lt IE 9]>
+            <script src="./lib/html5shiv/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- 头部 header start -->
+        <header id="header" class="header">
+            <div class="head">
+                <div class="back fl">
+                    <a href="coupon.html" class="icon-back">
+                        <img src="./images/icon-leftarrow.png" alt="">
+                    </a>
+                </div>
+                <div class="home fr">
+                    <a href="http://m.manmanbuy.com/?o=download"></a>
+                </div>
+                <h1>肯德基优惠券</h1>
+            </div>         
+        </header>
+        <!-- 头部 header end -->
+        <!-- 主体 main start -->
+        <main class="coupon-product">
+            <div class="c-p-title">
+                --点餐前出示手机中的优惠券，即可享受优惠--
+            </div>
+            <div class="quan-list">
+                <ul>
+                    <li class="active" style="width:100%;margin:0 auto;border:none;text-align:center">
+                        <img src="./images/jiazai.gif" alt="" style="width:6.25rem;display:inline-block">
+                    </li>
+                    <li class="error" style="width:100%;margin:0 auto;border:none;display:none;text-align:center">
+                        <img src="./images/error.jpg" alt="" style="width:10.0rem;display:inline-block">
+                    </li>
+                    <script type="text/html" id="quanTmp">
+                        {{each result as value i}}
+                            <li>
+                                <a href="{{getHref(value.couponProductImg)}}" title="{{getTitle(value.couponProductImg)}}">
+                                    <div class="pic">
+                                        {{#value.couponProductImg}}
+                                    </div>
+                                    <div class="info">
+                                        <h3>{{value.couponProductName}}</h3>
+                                        <h2>
+                                            <em>&yen;</em>
+                                            {{getNum(value.couponProductPrice)}}
+                                        </h2>
+                                        <div class="time">
+                                            {{value.couponProductTime}}
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+        </main>
+        <!-- 主体 main end -->
+        <!-- 导航 navBar start -->
+        <section class="navBar">
+            <a href="index.html">首页</a>
+            &nbsp;&gt;&nbsp;
+            <a href="coupon.html">优惠券</a>
+            &nbsp;&gt;&nbsp;
+            <a href="#">肯德基优惠券</a>
+        </section>
+        <!-- 导航 navBar end -->
+        <!-- 遮罩层 mask start -->
+        <section class="mask">
+            <ul class="pic-list">
+                <script type="text/html" id="picTmp">
+                    {{each result as value i}}
+                        <li>
+                            {{#value.couponProductImg}}
+                        </li>
+                    {{/each}}
+                </script>
+            </ul>
+            <a id="prevArrow"></a>
+            <a id="nextArrow"></a>
+        </section>
+        <!-- 遮罩层 mask end -->
+        <!-- 右侧固定app下载 start-->
+        <div class="fixedapp">
+            <a href="http://m.manmanbuy.com/?o=download">
+                <img src="images/app-down.png" alt="app下载"/>
+            </a>
+        </div>
+        <!-- 右侧固定app下载 end-->
+        <!-- 底部 footer start -->
+        <footer class="footer">
+            <div class="footer-top">
+                <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+                <a href="http://m.manmanbuy.com/reg.aspx">注册</a>
+                <a href="#">
+                    <img src="./images/footer-top.jpg" alt="">
+                    返回顶部
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>
+                    <a href="http://m.manmanbuy.com/?o=download">手机APP下载</a>
+                    <a href="m.manmanbuy.com">慢慢买手机版</a>
+                     -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com  
+                </p>
+            </div>
+        </footer>
+        <!-- 底部 footer end -->
+    </body>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template.js"></script>
+    <script src="./js/couponproduct.js"></script>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>慢慢买比价网</title>
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<!--css文件-->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/jquery-weui-build/dist/css/jquery-weui.css">
+	<link rel="stylesheet" href="css/m-base.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+
+
+<body>
+
+
+	<div id="backTop"></div>
+	<div class="ManManBuy">
+		<!--头部start-->
+		<header id="header">
+			<div class="fl header-logo">
+				<a href="javascript:;">
+					<img src="images/header_logo.png" alt="">
+				</a>
+			</div>
+			<div class="fr header-down">
+				<a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');">
+					<img src="images/header_app.png " alt=" ">
+				</a>
+			</div>
+		</header>
+		<!--头部end-->
+		<div id="slide" style=" " ontouchstart=" " class="weui-pull-to-refresh">
+			<div class="weui-pull-to-refresh-layer">
+				<div class="pull-to-refresh-arrow"></div>
+				<div class="pull-to-refresh-preloader"></div>
+				<div class="down">下拉后可以刷新</div>
+				<div class="up">松开后可以刷新</div>
+				<div class="refresh">为小主拼命加载中...(づ￣ 3￣)づ</div>
+			</div>
+			<!--搜索start-->
+			<div class="search" id="search">
+				<form>
+					<img src="images/delete.png" alt=" " id="delete-img">
+					<input type="search" placeholder="请输入你想比价的商品" id="keyWord">
+					<button type="button" class="search-btn">搜索</button>
+					<div class="searchBox">
+						<div class="searchContent">
+							<ul class="searchList">
+
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!--搜索end-->
+			<!--導航start-->
+			<nav class="container" id="nav">
+				<div class="row toggleDown" id="rowContent">
+
+				</div>
+			</nav>
+			<!--導航end-->
+			<!--超值start-->
+			<div class="superValue" id="superValue">
+				<a href="javascript:;" class="recommend ">
+					<span>超值折扣推荐</span>
+					<div class="sanjiao"></div>
+				</a>
+			</div>
+			<!--超值end-->
+			<!--商品start-->
+			<div class="main slide">
+
+			</div>
+			<!--商品end-->
+			<!--更多优惠信息start-->
+			<a href="moneyctrl.html" class="more-super">
+				<p>更多优惠信息 »</p>
+			</a>
+			<!--/更多优惠信息end-->
+			<!--品牌排行start-->
+			<div class="superValue brand ">
+				<a href="category.html" class="recommend">
+					<span>品牌排行</span>
+					<div class="sanjiao"></div>
+				</a>
+			</div>
+			<!--品牌排行end-->
+			<!--登录注册start-->
+			<div class="member">
+				<table class="table table-bordered">
+					<tr>
+						<td class="login"><a href="javascript:; ">登录</a></td>
+						<td><a href="javascript:;">注册</a></td>
+						<td class="back"><a href="#backTop"><i class="glyphicon glyphicon-arrow-up"></i> 返回顶部</a></td>
+					</tr>
+				</table>
+			</div>
+			<!--登录注册end-->
+
+			<!--页尾satrt-->
+			<footer id="footer">
+				<p>
+					<a href="http://m.manmanbuy.com/?o=download " onclick="trackEvent( 'footer下载'); " style="color: Red;
+				    ">手机APP下载</a> <a href="http://m.manmanbuy.com ">慢慢买手机版</a> -- 掌上比价平台
+				</p>
+				<p>
+					m.manmanbuy.com
+				</p>
+			</footer>
+			<!--页尾end-->
+			<!--app下载start-->
+			<div class="app-down">
+				<a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');">
+					<img src="images/app-down.png" alt=" ">
+				</a>
+			</div>
+			<!--app下载end-->
+		</div>
+	</div>
+
+	<script type="text/html" id="searchTmp">
+		{{each s as value i}}
+			<li>{{value}}</li>
+		{{/each}}
+	</script>
+
+	<script type="text/html" id="menuTmp">
+       {{each result as value i }}
+         	<div class="area-item">
+                <a href="{{value.titlehref}}" class="links ">
+                    <div class="father-img">{{#value.img}}</div>
+                    <p>{{value.name}}</p>
+                </a>
+            </div>
+       {{/each}}
+    </script>
+
+	<script type="text/html" id="productTmp">
+		{{each result as value i}}
+			<div class="media">
+				<a href="discount-l.html?productid={{value.productId}}">
+					<div class="media-left">
+							{{#value.productImgSm}}
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">{{value.productName}} <span>{{value.productPinkage}}</span></h4>
+						<div class="other ">
+							<span><em>{{value.productFrom}}</em> | <em>{{value.productTime}}</em></span>
+							<span class="pull-right">
+								<img src="images/talk.png" id="talk" class="fl" alt="">
+								<em class="fl">{{getNum1(value.productComCount)}}</em>
+							</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		{{/each}}
+	</script>
+
+	<!--js文件-->
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/jquery-weui-build/dist/js/jquery-weui.js"></script>
+	<script src="./lib/template/template.js"></script>
+	<script src="lib/rem/rem.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>

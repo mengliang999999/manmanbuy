@@ -1,0 +1,138 @@
+<!--html5标准文档模式-->
+<!DOCTYPE html>
+<!--试用的语言是中文简体-->
+<html lang="zh-CN">
+<head>
+    <!--编码格式-->
+    <meta charset="utf-8">
+    <!--是告诉浏览器用最新的渲染引擎来渲染页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--用标准的移动端viewport设置来渲染页面  设置宽度和设备一样宽 默认的缩放比是和pc一样 1.0 不允许用户缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 首先告诉浏览器   优先解析-->
+    <title>白菜价-淘宝内部券</title>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <!--需要引用bootstrap的核心css文件-->
+    <!-- Bootstrap -->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--条件注释  小于IE9才会运行标签里面的代码   gt  gte  lte  条件判断    -->
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.js"></script>
+    <script src="lib/respond/respond.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/m-base.css"/>
+    <link rel="stylesheet" href="css/baicaijia.css"/>
+    <style>
+        html,body{
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<!--加载的遮罩层-->
+<div id="load">
+    <img src="images/jiazai.gif" alt=""/>
+</div>
+<!--head部分-->
+<div class="head" id="head">
+    <div class="back fl">
+        <a href="index.html" class="icon-back"></a>
+    </div>
+    <div class="home fr">
+        <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('header部下载');" class="icon-app"></a>
+    </div>
+    <h1>白菜价-淘宝内部券</h1>
+</div>
+<!--main部分-->
+<div class="main">
+    <div class="nav">
+        <div class="icon-search"></div>
+        <ul class="clearfix">
+        </ul>
+    </div>
+    <!--loding-->
+    <div id="loading">
+        <img src="images/error.jpg" alt=""/>
+        <a href="category.html">点我重试呗❤</a>
+    </div>
+    <div class="list">
+        <ul class="clearfix">
+        </ul>
+    </div>
+</div>
+<!--foot部分-->
+<div class="footer">
+    <div class="foot_t">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width:40%;border: 0;">
+            <img src="images/top.jpg"/>
+            返回顶部
+        </a>
+    </div>
+    <div class="foot_b">
+        <p>
+            <a href="javascript:;" id="app">手机APP下载</a>
+            <a href="javascript:;" id="phone">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</div>
+<a class="gotop" id="gotop" href="#head" style="display: inline-block;"></a>
+<!--模板部分-->
+<script type="text/html" id="title">
+    {{each result as value i}}
+    <li titleid="{{value.titleId}}"><a href="javascript:;">{{value.title}}</a></li>
+    {{/each}}
+</script>
+<script type="text/html" id="product">
+    {{each result as value i}}
+    <li>
+        <div class="pic">
+            {{#value.productImg}}
+        </div>
+        <div class="info">
+            <div class="i">
+                <div class="t">
+                    {{#value.productName}}
+                </div>
+                <div class="pr">
+                    {{#value.productPrice}}
+                </div>
+            </div>
+            <div class="o">
+                {{#value.productCouponRemain}}
+                <div class="b clearfix">
+                    <div class="q">
+                        {{#value.productCoupon}}
+                    </div>
+                    <div class="g">
+                        {{#value.productHref}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+</script>
+<!--因为是基于jquery的-->
+<script src="lib/jquery/jquery.min.js"></script>
+<!-- 腾讯模板 -->
+<script src="lib/template/template.js"></script>
+<!-- bootstrap js -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- 动画方式 -->
+<script src="lib/gdsmith-jquery.easing-82496a9/jquery.easing.1.1.1.js"></script>
+<!-- 画布框架 -->
+<script src="lib/Konvas/konva.min.js"></script>
+<!-- 懒加载 -->
+<script src="lib/jquery/jquery.lazyload.min.js"></script>
+<script src="lib/jquery/jquery.scrollstop.min.js"></script>
+<!--TODO自己的js文件-->
+<script src="js/baicaijia.js"></script>
+</body>
+</html>

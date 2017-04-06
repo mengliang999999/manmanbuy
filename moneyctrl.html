@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>最新优惠-省钱控</title>
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<!--css文件-->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/m-base.css">
+	<link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+
+<body>
+	<span id="over-fire"></span>
+	<span id="mask"></span>
+	<div class="cover" id="cover-dis">
+		<div class="load-img">
+			<img src="images/wait.gif" alt="">
+		</div>
+	</div>
+	<div id="backTop"></div>
+	<div class="ManManBuy">
+		<!--頭部start-->
+		<header>
+			<div class="row">
+				<div class="back-index"><a href="index.html"><i class="glyphicon glyphicon-menu-left"></i></a></div>
+				<div class="discount">
+					<h1>省钱控-最新优惠</h1>
+				</div>
+				<div class="app1-down">
+					<a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');">
+						<img src="images/header_app.png" alt="">
+					</a>
+				</div>
+			</div>
+		</header>
+		<!--頭部end-->
+		<!--商品start-->
+		<div class="main">
+
+		</div>
+		<!--商品end-->
+		<!--分页start-->
+		<div class="page clearfix">
+			<a href="javascript:;" class="prev fl">上一页</a>
+			<select class="sel">
+                    
+                </select>
+			<a href="javascript:;" class="next fr">下一页</a>
+		</div>
+		<!--分页end-->
+		<!--內容start-->
+		<div class="backIndex"><a href="index.html" class="fl">首页&nbsp;&nbsp;>&nbsp;&nbsp;</a><span class="fl">省钱控</span></div>
+		<!--內容end-->
+		<!--登录注册start-->
+		<div class="member">
+			<table class="table table-bordered">
+				<tr>
+					<td class="login"><a href="javascript:;">登录</a></td>
+					<td><a href="javascript:;">注册</a></td>
+					<td class="back"><a href="#backTop"><i class="glyphicon glyphicon-arrow-up"></i> 返回顶部</a></td>
+				</tr>
+			</table>
+		</div>
+		<!--登录注册end-->
+
+		<!--页尾satrt-->
+		<footer>
+			<p>
+				<a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">慢慢买手机版</a>				-- 掌上比价平台
+			</p>
+			<p>
+				m.manmanbuy.com
+			</p>
+		</footer>
+		<!--app下载start-->
+		<div class="app-down">
+			<a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');">
+				<img src="images/app-down.png" alt="">
+			</a>
+		</div>
+		<!--app下载end-->
+
+	</div>
+
+	<script type="text/html" id="productTmp">
+		{{each result as value i}}
+			<div class="media">
+				<a href="discount-l.html?productid={{value.productId}}">
+					<div class="media-left">
+							{{#value.productImgSm}}
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">{{value.productName}} <span>{{value.productPinkage}}</span></h4>
+						<div class="other">
+							<span><em>{{value.productFrom}}</em> | <em>{{value.productTime}}</em></span>
+							<span class="pull-right">
+								<img src="images/talk.png" id="talk" class="fl" alt="">
+								<em class="fl">{{getNum1(value.productComCount)}}</em>
+							</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		{{/each}}
+		<!--遮罩-->
+   
+	</script>
+
+	<!--js文件-->
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/template/template.js"></script>
+	<script src="lib/rem/rem.js"></script>
+	<script src="js/loading.js"></script>
+	<script src="js/moneyctrl.js"></script>
+</body>
+
+</html>

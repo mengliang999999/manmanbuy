@@ -1,0 +1,172 @@
+body {
+  font-family: "宋体";
+  background-color: #f1f1f1;
+}
+a {
+  font-family: "宋体";
+}
+input {
+  font-family: "宋体";
+}
+* {
+  box-sizing: border-box;
+}
+/*头部*/
+#header {
+  height: 1.25rem;
+  background: #ff841d;
+}
+#header > h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 0.5rem;
+  font-weight: bold;
+  line-height: 1.25rem;
+}
+#header > .larrow {
+  float: left;
+  padding: 0.3rem;
+}
+#header > .larrow img {
+  height: 0.625rem;
+  width: 0.625rem;
+  overflow: hidden;
+}
+#header > .appdown {
+  float: right;
+  padding: 0.175rem;
+}
+#header > .appdown img {
+  height: 0.85rem;
+  width: 0.85rem;
+  overflow: hidden;
+}
+.gsgroup .gshd {
+  background-color: #fff;
+  padding-right: 1.25rem;
+  position: relative;
+}
+.gsgroup .gshd .gs-search {
+  border-bottom: 1px solid #ccc;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.gsgroup .gshd .gs-search img {
+  width: 1.25rem;
+  height: 0.975rem;
+}
+.gsgroup .gshd .filter {
+  height: 1.0rem;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.gsgroup .gshd .filter > ul > li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  line-height: 1.0rem;
+  font-size: 0.4rem;
+}
+.gsgroup .gshd .filter > ul > li > a {
+  color: #000;
+  vertical-align: middle;
+}
+.gsgroup .gshd .filter > ul > li > i {
+  vertical-align: middle;
+  margin-left: 0.125rem;
+  display: inline-block;
+  width: 0.6rem;
+  height: 1.0rem;
+}
+.gsgroup .gshd .filter > ul > li:nth-child(2) {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.gsgroup .gshd .downlist #shop,
+.gsgroup .gshd .downlist #area,
+.gsgroup .gshd .downlist #price {
+  position: absolute;
+  top: 1.0rem;
+  left: 0;
+  z-index: 8;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  width: 100%;
+}
+.gsgroup .gshd .downlist #shop > ul > li > a,
+.gsgroup .gshd .downlist #area > ul > li > a,
+.gsgroup .gshd .downlist #price > ul > li > a {
+  display: block;
+  padding-left: 0.25rem;
+  color: #000;
+  font-size: 0.4rem;
+  line-height: 1.0rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.gsgroup .gs-product-list {
+  padding: 0.25rem 0;
+}
+.gsgroup .gs-product-list > ul > li {
+  float: left;
+  width: 50%;
+  padding: 0.125rem;
+}
+.gsgroup .gs-product-list > ul > li a {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 0.125rem;
+  transition: all 1s;
+}
+.gsgroup .gs-product-list > ul > li a > img {
+  width: 4.35rem;
+  height: 4.35rem;
+  display: inline-block;
+}
+.gsgroup .gs-product-list > ul > li a > .title {
+  text-align: left;
+  font-size: 0.3rem;
+  line-height: 0.35rem;
+  padding: 0.125rem;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gsgroup .gs-product-list > ul > li a > .other {
+  padding: 0.125rem 0;
+}
+.gsgroup .gs-product-list > ul > li a > .other > .price {
+  color: #f8601d;
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+.gsgroup .gs-product-list > ul > li a > .other > .btn {
+  font-size: 0.35rem;
+  padding: 0.1rem 0.25rem;
+  color: #fff;
+  background-color: #ff841d;
+}
+.gsgroup .gs-product-list > ul > li a:hover {
+  box-shadow: 0 5px 10px #999;
+  transform: translateY(-3px);
+}
+#gotop {
+  position: fixed;
+  z-index: 999;
+  bottom: 30px;
+  right: 8px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  height: 40px;
+  border-radius: 20px;
+  color: white;
+  opacity: 0.8;
+  background-color: #ff841d;
+}

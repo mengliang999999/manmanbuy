@@ -1,0 +1,26 @@
+
+1. 引入模板引擎的JS文件 template.js(简洁语法) template-native.js(原生语法)
+2. 定义一个模板<script type="text/html" id="模板的ID"> 模板的标签内容</script>
+3. 使用ajax获取服务端数据调用template('模板id',数据)方法 实现将数据拼接到模板字符串里面
+4. 接收template()方法返回的拼接好的字符串渲染到页面上
+
+
+
+
+
+<script>
+    var source = '<ul>'
+    +    '{{each list as value i}}'
+    +        '<li>索引 {{i + 1}} ：{{value}}</li>'
+    +    '{{/each}}'
+    + '</ul>';
+    // 根据模板生成渲染函数；compile方法返回值是一个函数
+    var render = template.compile(source);
+    // render的作用就是用数据渲染静态标签内容
+    var data = {
+        list: ['摄影', '电影', '民谣', '旅行', '吉他']
+    };
+    var html = render(data);
+
+    document.getElementById('content').innerHTML = html;
+    </script>

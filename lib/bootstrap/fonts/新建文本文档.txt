@@ -1,0 +1,16 @@
+1.ÒýÈë
+@font-face {
+    font-family: "wjs";
+    /* IE9 Compat Modes */
+    src: url('../fonts/MiFie-Web-Font.eot') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/MiFie-Web-Font.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/MiFie-Web-Font.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/MiFie-Web-Font.svg') format('svg'); /* Legacy iOS */
+}
+2
+.ico-logo{
+font-family: "wjs";
+}
+.ico-logo:before{
+    content: "\e920";
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- rem随页面改变HTML字体大小 -->
+    <script src="lib/rem/rem.js"></script>
+    <!-- bootstraps css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/m-base.css"/>
+    <!-- less文件导入 -->
+    <link rel="stylesheet/less" href="css/bijia.less">
+    <!-- 解析less的js -->
+    <script src="lib/less/less.min.js"></script>
+    <!-- 响应式布局兼容写法 -->
+    <!--[if lte IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+<body style="overflow: hidden">
+<!--正在加载 遮罩-->
+<div class="mask" style="position: absolute;width: 100%;height: 100%;z-index: 9999999999;background:rgba(0,0,0,0.5)">
+    <img src="images/jiazai.gif" style="width: 50%;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%)" alt=""/>
+</div>
+<div id="content">
+    <div id="snowflake"></div>
+</div>
+<header>
+    <div class="fl header-logo">
+        <a href="index.html">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="fr header-down">
+        <a href="http://m.manmanbuy.com/?o=download">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+<header style='position: absolute;left: 0;opacity: 0;top:0;z-index: 999999'>
+    <div class="fl header-logo">
+        <a href="index.html">
+            <img src="images/header_logo.png" alt="">
+        </a>
+    </div>
+    <div class="fr header-down">
+        <a href="http://m.manmanbuy.com/?o=download">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+</div>
+<img id="zaijiaerror" src="images/error.jpg" style="display: none" alt=""/>
+<a id="update" href="" style='display: none;width: 100%;height: 30px;background-color: #fff;color:mediumvioletred;text-align: center '>重新加载</a>
+<!--登录注册start-->
+<div class="member">
+    <table class="table table-bordered">
+        <tr>
+            <td class="login"><a href="javascript:;">登录</a></td>
+            <td><a href="javascript:;">注册</a></td>
+            <td class="back"><a href="#content"><i class="glyphicon glyphicon-arrow-up"></i> 返回顶部</a></td>
+        </tr>
+    </table>
+</div>
+<!--登录注册end-->
+<!--页脚-->
+<footer>
+    <p>
+        <a href="http://m.manmanbuy.com/?o=download"  style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">慢慢买手机版</a>				-- 掌上比价平台
+    </p>
+    <p>
+        m.manmanbuy.com
+    </p>
+</footer>
+</body>
+<script type="text/html" id="getproduct">
+    <div id="product-bijia">
+        <nav class="product-list-title clearfix">
+            &nbsp; &nbsp;<a href="index.html" class="list-title1">首页</a> &gt;
+            <a href="{{if backurl()[0]}}productlist.html?categoryid=0&amp;category=电视&amp;pageid=1{{else}}brand.html?brandtitleid={{backurl()[1]}}{{/if}}" class="list-title2"></a> &gt;
+            <a href="#" class="list-title3"></a> &gt;
+            <!--<a href="" class="select fr">筛选</a>-->
+            <!-- 筛选-->
+            <a class="btn btn-primary fr" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                筛选
+            </a>
+            <div class="collapse" id="collapseExample">
+                <div class="well">
+                    <button type="button" style=" width: 60px;height: 30px;padding: 0;" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                        全部删除
+                    </button><br/>
+                    <div style="min-height: 18px;"></div>
+                    <input type='radio' name="bao" id="one"/><lable for='one'>包邮</lable>包邮
+                    <input type='radio' name="bao" id="two"/><lable for='two'>不包邮</lable> <br/>
+                    <input type='checkbox' id="three"/><lable for='three'>液晶电视</lable><br>
+                    <input type='checkbox' id="four"/><lable for='four'>大屁股电视</lable><br>
+                    <input type='checkbox' id=" five"/><lable for='five'>4K电视</lable><br>
+                    <input type='checkbox' id="six"/><lable for='six'>3D电视</lable><br>
+                    <input type='checkbox' id="seven"/><lable for='seven'>家庭智能电视</lable>
+                </div>
+            </div>
+        </nav>
+        <div class="product-bijia">
+            <div class="product-name">{{result[0].productName}}</div>
+            <div class="product-img">
+                {{#result[0].productImg}}
+            </div>
+            <div class="product-collect">
+                <a href="javascript:;">
+                    <img src="http://www.zuyushop.com/wap/images/sc.jpg" width="39" height="39">
+                </a>
+            </div>
+        </div>
+        <div class="tab">
+            <ul>
+                <li class="cur"><a href="#">比价购买</a></li>
+                <li><a href="#">产品参数</a></li>
+                <li><a href="#" class="">评价(2322)</a></li>
+            </ul>
+        </div>
+        <div class="plist">
+            {{#result[0].bjShop}}
+            <div class="note" style="display: none">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+            </div>
+        </div>
+        <!--<div class="product-com-title" style="display: none">-->
+            <!--<div>网友评价</div>-->
+        <!--</div>-->
+        <div class="product-com-list" style="display: none">
+            <ul>
+
+            </ul>
+            <div class="more"><a class="morein" href="javascript:;">查看更多评价</a></div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="getproductcom">
+    {{each result as value i}}
+    <li>
+        <div class="clearfix"><span class="pull-left com-name">{{value.comName}}</span><span class="pull-right com-time">{{value.comTime}}</span>
+        </div>
+        <div class="clearfix"><span class="star pull-left com-star"><em class="star5"></em></span><span
+                class="pull-right com-from">{{value.comFrom}}</span></div>
+        <div class="com-content">
+          {{value.comContent}}
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/gdsmith-jquery.easing-82496a9/jquery.easing.1.1.1.js"></script>
+<script src="lib/jquery.transit.js"></script>
+<!-- 腾讯模板 -->
+<script src="lib/template/template.js"></script>
+<!-- bootstrap js -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- 动画方式 -->
+<script src="lib/gdsmith-jquery.easing-82496a9/jquery.easing.1.1.1.js"></script>
+<script src="js/bijia.js"></script>
+<!--增加模板方法-->
+<script>
+    template.helper('backurl',backurl);
+    function backurl(){
+        var flag=fc.getUrlParam('brandtitleid');
+        if(flag===null){
+            return {0:true};
+        }
+        return {0:false,1:flag};
+    }
+</script>
+</html>

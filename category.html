@@ -1,0 +1,137 @@
+<!--html5标准文档模式-->
+<!DOCTYPE html>
+<!--试用的语言是中文简体-->
+<html lang="zh-CN">
+<head>
+    <!--编码格式-->
+    <meta charset="utf-8">
+    <!--是告诉浏览器用最新的渲染引擎来渲染页面-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--用标准的移动端viewport设置来渲染页面  设置宽度和设备一样宽 默认的缩放比是和pc一样 1.0 不允许用户缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- 首先告诉浏览器   优先解析-->
+    <title>全网比价.分类</title>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <!--需要引用bootstrap的核心css文件-->
+    <!-- Bootstrap -->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--条件注释  小于IE9才会运行标签里面的代码   gt  gte  lte  条件判断    -->
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.js"></script>
+    <script src="lib/respond/respond.js"></script>
+    <![endif]-->
+    <!-- less文件导入 -->
+    <link rel="stylesheet/less" href="css/catagory.less">
+    <!-- 解析less的js -->
+    <script src="lib/less/less.min.js"></script>
+    <link rel="stylesheet" href="css/m-base.css"/>
+    <!--<link rel="stylesheet" href="css/catagory.css"/>-->
+</head>
+<body>
+<div id="load">
+    <img src="images/jiazai.gif" alt=""/>
+</div>
+<!-- 头部区域 -->
+<header id="header">
+    <a href="index.html" class="logo"><img src="images/header_logo.png" alt=""></a>
+    <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('header部下载');" class="app">
+        <img src="images/header_app.png" alt="">
+    </a>
+</header>
+<!-- 搜索区域 -->
+<section id="search">
+    <!-- 在两个input外面套一个form表单 一是 语义角度 二是布局的角度 -->
+    <form action="#">
+        <!-- type=search 当点击搜索框的时候输入法右下角 变成搜索 -->
+        <input type="search" name="" id="txt" placeholder="请输入要比价的商品">
+        <input type="submit" value="搜索" id="sub">
+
+        <div id="info"></div>
+    </form>
+    <img src="images/delete.png" alt="" class="cha"/>
+
+</section>
+<!--loding-->
+<div id="loading">
+    <img src="images/error.jpg" alt=""/>
+    <a href="category.html">点我重试呗❤</a>
+</div>
+
+<!-- 分类区域 -->
+<section id="category">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    </div>
+</section>
+<!-- 底部区域 -->
+<div class="footer">
+    <div class="foot_t">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="#" style="width:40%;border: 0;">
+            <img src="images/top.jpg"/>
+            返回顶部
+        </a>
+    </div>
+    <div class="foot_b">
+        <p>
+            <a href="javascript:;" id="app">手机APP下载</a>
+            <a href="javascript:;" id="phone">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p>
+            m.manmanbuy.com
+        </p>
+    </div>
+</div>
+
+<!-- 分类标题模板 -->
+<script type="text/html" id="categoryTitleTmp">
+    {{each result as value i}}
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}" aria-expanded="true"
+                   aria-controls="collapseOne" data-titleId="{{value.titleId}}">
+                    {{value.title}}
+                </a>
+            </h4>
+        </div>
+        <div id="collapse{{i}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<!-- 分类列表模板  -->
+<script type='text/html' id="categoryTmp">
+    <div class="row">
+        {{each result as value i}}
+        <div class="col-xs-4">
+            <a class="one-txt-cut" href="productlist.html?categoryid={{value.categoryId}}&category={{value.category}}">{{value.category}}</a>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<!--因为是基于jquery的-->
+<script src="lib/jquery/jquery.min.js"></script>
+<!-- 腾讯模板 -->
+<script src="lib/template/template.js"></script>
+<!-- bootstrap js -->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- rem随页面改变HTML字体大小 -->
+<script src="lib/rem/rem.js"></script>
+<!-- 动画方式 -->
+<script src="lib/gdsmith-jquery.easing-82496a9/jquery.easing.1.1.1.js"></script>
+<!-- 画布框架 -->
+<script src="lib/Konvas/konva.min.js"></script>
+<!-- 懒加载 -->
+<script src="lib/jquery/jquery.lazyload.min.js"></script>
+<script src="lib/jquery/jquery.scrollstop.min.js"></script>
+<!--TODO自己的js文件-->
+<script src="js/category.js"></script>
+</body>
+</html>

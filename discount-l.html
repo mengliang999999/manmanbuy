@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>慢慢买</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+	<!--css文件-->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/m-base.css">
+	<link rel="stylesheet" href="css/discount.css">
+</head>
+
+<body>
+    <span id="over-fire"></span>
+    <span id="mask"></span>
+    <!--遮罩-->
+    <div class="cover" id="cover-dis">
+        <div class="load-img">
+            <img src="images/wait.gif" alt="">
+        </div>
+    </div>
+    <div class="ManManBuy">
+        <!--頭部start-->
+        <header>
+            <div class="row">
+                <div class="back-index"><a href="index.html"><i class="glyphicon glyphicon-menu-left"></i></a></div>
+                <div class="discount"><h1>囯內折扣</h1></div>
+                <div class="app1-down">
+                    <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');">
+                        <img src="images/header_app.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!--頭部end-->
+        <!--內容start-->
+        <div class="discount" id="discount">
+            
+        </div>
+        <div class="backIndex"><a href="index.html">首页 ></a></div>
+        <!--內容end-->
+
+        <div class="appBanner clearfix">
+                <div class="appLogo">
+                    <img src="images/down-logo.png" alt="">
+                </div>
+                <div class="tit">
+                    <span>慢慢APP</span>
+                    <p>专注全网比价，每一次购物都在为你省钱！</p>
+                    <a href="javascript:;" class="btn">立即打开</a>
+                </div>
+                <div class="btn"></div>    
+        </div>
+        <!--登录注册start-->
+		<div class="member">
+			<table class="table table-bordered">
+				<tr>
+					<td class="login"><a href="javascript:;">登录</a></td>
+					<td><a href="javascript:;">注册</a></td>
+					<td class="back"><a href="#backTop"><i class="glyphicon glyphicon-arrow-up"></i> 返回顶部</a></td>
+				</tr>
+			</table>
+		</div>
+		<!--登录注册end-->
+
+		<!--页尾satrt-->
+		<footer>
+			<p>
+				<a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a> <a href="http://m.manmanbuy.com">慢慢买手机版</a>				-- 掌上比价平台
+			</p>
+			<p>
+				m.manmanbuy.com
+			</p>
+		</footer>
+        <!--app下载start-->
+		<div class="app-down">
+			<a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer下载');">
+				<img src="images/app-down.png" alt="">
+			</a>
+		</div>
+		<!--app下载end-->
+
+        <!--最尾部的-->
+        <div class="footer-cu">
+            <div class="comment">
+                <a href="#comment">
+                    <p><i class="glyphicon glyphicon-edit"></i></p>
+                    <p>评论</p>
+                </a>
+            </div>
+            <div class="go-buy">
+                <a href="javascipt:;"><i class="glyphicon glyphicon-shopping-cart"></i> 前往购买</a>
+            </div>
+        </div>
+        
+    </div>
+    		
+    <script type="text/html" id="detailTmp">
+        {{each result as value i}}
+        <h3 class="title">{{value.productName}}</h3>
+            <h4>{{value.productPinkage}}</h4>
+            <div class="info">
+                <span class="mall">{{value.productFrom}}</span>
+                <span class="addtime" style="margin-right: 4px;">{{value.productTime}}</span>  <span class="author">{{value.productTips}}</span></br>
+                <span class="author"><a href="#newcomment" style="color:#4682c5;">{{value.productComCount}}</a></span> 
+            </div>
+            <div class="discount-content clearfix">
+                    <div class="pic">
+                        {{#value.productImgSm}}
+                    </div>
+                    <div class="con">
+                        <!--内容开始--> 
+                            {{value.productInfo}}<br>
+                            <br>
+                            {{value.productInfo1}}<br>
+                            <br>
+                                <div class="big-image">
+                                    {{#value.productImg2}}
+                                </div>
+                        <!--内容结束-->
+                    </div>
+                    <div class="go-buy">
+                        <a href="javascript:;"><i class="glyphicon glyphicon-shopping-cart"></i> 立即购买</a>
+                    </div>
+            </div>
+            <!--评论start-->
+            <div class="comment" id="comment">
+                <div class="tit">发表评论</div>
+                <form>
+                    <textarea class="form-control" rows="4"></textarea>
+                    <button type="button">发表评论</button>
+                </form>
+                <div class="newComment">最新评论</div>
+                <ul class="clearfix">
+                    <li class="comment-item clearfix">
+                        <div class="userImg">
+                            <img src="images/user.jpg" alt="">
+                        </div>
+                        <div class="com-con">
+                            <div class="un clearfix">
+                                <div class="username fl">wwwww</div>
+                                <div class="time fr">2016/10/17 18:30:34</div>
+                            </div>
+                            <div class="content">
+                                <div>为什么我这里显示的还是99啊</div>
+                                <div class="yingyong">
+                                    <span style="color:#5799CC;">引用 @︻︼─一芯系，丫头???：</span></br>
+                                    <span>138啊 变价L</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--评论end-->
+            {{/each}}
+    </script>
+	<!--js文件-->
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/template/template.js"></script>
+	<script src="lib/rem/rem.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/discount.js"></script>
+</body>
+
+</html>

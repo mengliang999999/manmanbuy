@@ -1,0 +1,218 @@
+html,
+body {
+  background: #eee;
+}
+.ManManBuy {
+  min-width: 300px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+header {
+  height: 2.2rem;
+  background: #f4483e;
+  overflow: hidden;
+}
+header .row .back-index {
+  width: 15%;
+  height: 2.2rem;
+  float: left;
+}
+header .row .back-index a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 2.2rem;
+  color: #fff;
+  font-size: 0.9rem;
+}
+header .row .discount {
+  width: 70%;
+  height: 2.2rem;
+  float: left;
+}
+header .row .discount h1 {
+  text-align: center;
+  line-height: 1.8rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+header .row .app1-down {
+  width: 15%;
+  height: 2.2rem;
+  float: left;
+}
+header .row .app1-down a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+header .row .app1-down a img {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-top: 0.25rem;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide {
+  font-size: 14px;
+  height: 38px;
+  border-bottom: 2px solid #fff;
+}
+.swiper-slide.active {
+  border-bottom-color: #E4393C;
+}
+.main .media {
+  padding: 0.5rem 0.3rem;
+  background: #fff;
+  margin: 0.5rem 0;
+}
+.main .media .media-left a {
+  display: block;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.main .media .media-left a img {
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.main .media .media-body h4 {
+  font-size: 0.7rem;
+}
+.main .media .media-body .other .price {
+  margin-top: 0.5rem;
+}
+.main .media .media-body .other .price span {
+  font-size: 1.1rem;
+  color: #FC353A;
+}
+.main .media .media-body .other .price span em {
+  font-size: 0.6rem;
+}
+.main .media .media-body .other .price del {
+  color: #a8a8a8;
+  margin-left: 0.5rem;
+  font-size: 12px;
+}
+.main .media .media-body .other .pro {
+  margin-top: 0.5rem;
+}
+.main .media .media-body .other .pro .proNumber {
+  display: inline-block;
+  width: 4.1rem;
+  height: 0.5rem;
+  background: pink;
+  line-height: 0.5rem;
+  text-align: center;
+  font-size: 0.6rem;
+  color: #fff;
+  border-radius: 0.3rem;
+  border: 1px solid #FC353A;
+  position: relative;
+  overflow: hidden;
+}
+.main .media .media-body .other .pro .proNumber em {
+  display: inline-block;
+  width: 1%;
+  height: 0.7rem;
+  background: #FC353A;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main .media .media-body .other .pro .number {
+  font-size: 0.6rem;
+  color: #FC353A;
+  margin-left: 0.5rem;
+}
+.main .media .media-body .other .links {
+  margin-top: 0.5rem;
+}
+.main .media .media-body .other .links .money {
+  width: 5rem;
+  height: 1.3rem;
+  line-height: 1.3rem;
+  text-align: center;
+  display: inline-block;
+  border: 1px dotted #FC353A;
+  color: #FC353A;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main .media .media-body .other .links .money a {
+  color: #FC353A;
+}
+.main .media .media-body .other .links .order {
+  display: inline-block;
+  width: 2.9rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  text-align: center;
+  color: #fff;
+  background: #FC353A;
+  float: right;
+  border-radius: 0.25rem;
+}
+.main .media .media-body .other .links .order a {
+  color: #fff;
+}
+.member > table {
+  border: none;
+  margin: 0;
+  background: #EFEFEF;
+}
+.member > table tr td {
+  text-align: center;
+  font-size: 14px;
+  padding: 0!important;
+}
+.member > table tr td a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem;
+  color: #5a5a5a;
+}
+.member > table tr .login {
+  border-left: none;
+}
+.member > table tr .back {
+  border-right: none;
+}
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #EFEFEF;
+}
+.app-down {
+  width: 3rem;
+  height: 3.35rem;
+  position: fixed;
+  right: 0;
+  bottom: 1.5rem;
+  z-index: 1000;
+}

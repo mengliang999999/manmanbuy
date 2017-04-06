@@ -1,0 +1,219 @@
+#header {
+  height: 50px;
+  background: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  box-sizing: border-box;
+  > .logo {
+    width: 75%;
+    float: left;
+    margin-left: 5px;
+    padding: 12px;
+
+    > img {
+      max-height: 25px;
+      overflow: hidden;
+      width: 185.5px;
+      height: 25px;
+    }
+  }
+  > .app {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    padding: 7px;
+    > img {
+      max-height: 34px;
+      overflow: hidden;
+      width: 34px;
+    }
+  }
+}
+
+#search {
+  padding: 10px;
+  background-color: #fff;
+  position: relative;
+  > form {
+    position: relative;
+    padding-right: 70px;
+    > #txt {
+      width: 100%;
+      -webkit-appearance: none;
+      border: none;
+      background: #f1f1f1;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      font-size: 13px;
+      //padding-right: 50px;
+      padding-left: 20px;
+      outline: none;
+    }
+    > #sub {
+      position: absolute;
+      -webkit-appearance: none;
+      width: 63px;
+      background: #ff841d;
+      color: #FFFFFF;
+      border: none;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 15px;
+      top: 0px;
+      right: 0px;
+      font-size: 16px;
+      outline: none;
+
+    }
+    > #info {
+      position: absolute;
+      z-index: 999;
+      width: 100%;
+      background-color: lightgoldenrodyellow;
+      border-radius: 16px;
+      padding: 0 20px;
+      > ul {
+        > li {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  > img {
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    top: 18px;
+    right: 95px;
+    background: url('../images/delete.png') no-repeat center/cover;
+    display: none;
+  }
+}
+
+#category {
+  > .panel-group {
+    > .panel-default {
+      margin-top: 0;
+      border-bottom: 0;
+      > .panel-heading {
+        background: #ededed;
+        margin: 0;
+        padding: 0;
+        > h4 {
+          > a {
+            height: 40px;
+            background: url(http://www.zuyushop.com/wap/images/arrow1.gif) right center no-repeat;
+            line-height: 40px;
+            color: #000;
+            font-size: 16px;
+            display: block;
+            padding-left: 16px;
+            font-weight: bold;
+          }
+        }
+      }
+      > .panel-collapse {
+        > .panel-body {
+          padding: 0;
+          background: #f9f9f9;
+          > .row {
+            > div {
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              border-right: 1px solid #ccc;
+              border-bottom: 1px solid #ccc;
+              > a {
+                color: #333;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  > .foot_t {
+    background: #efefef;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    height: 34px;
+    line-height: 34px;
+    margin-top: 25px;
+    clear: both;
+    > a {
+      float: left;
+      font-size: 14px;
+      border-right: 1px solid #c4c4c4;
+      text-align: center;
+      width: 30%;
+      color: #000;
+      > img {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+        margin-top: -5px;
+        margin-right: 5px;
+      }
+    }
+  }
+  > .foot_b {
+    background: #efefef;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px 0;
+    color: #666;
+    > p {
+      #app {
+        color: red;
+      }
+      > #phone {
+        color: black;
+      }
+    }
+  }
+}
+
+#loading {
+  text-align: center;
+  display: none;
+  > a {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    background-color: #fff;
+  }
+}
+
+#load {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  height: 100%;
+  background-color: black;
+  opacity: .8;
+  text-align: center;
+  > img {
+    display: inline-block;
+    width: 40%;
+    height: 40%;
+    margin-top: 150px;
+  }
+}
+
+body {
+  overflow: hidden
+}

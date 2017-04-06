@@ -1,0 +1,192 @@
+@mainColor: #ff841d;
+body {
+    font-family: "宋体";
+    background-color: #f1f1f1;
+}
+
+a {
+    font-family: "宋体";
+}
+
+input {
+    font-family: "宋体";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*头部*/
+
+#header {
+    height: 1.25rem;
+    background: @mainColor;
+    >h3 {
+        text-align: center;
+        color: #fff;
+        font-size: 0.5rem;
+        font-weight: bold;
+        line-height: 1.25rem;
+    }
+    >.larrow {
+        float: left;
+        padding: 0.3rem;
+        img {
+            height: 0.625rem;
+            width: 0.625rem;
+            overflow: hidden;
+        }
+    }
+    >.appdown {
+        float: right;
+        padding: 0.175rem;
+        img {
+            height: 0.85rem;
+            width: 0.85rem;
+            overflow: hidden;
+        }
+    }
+}
+
+// 商品详情
+.gsgroup {
+    // 商品头部
+    .gshd {
+        background-color: #fff;
+        padding-right: 1.25rem;
+        position: relative;
+        // 搜索
+        .gs-search {
+            border-bottom: 1px solid #ccc;
+            position: absolute;
+            right: 0;
+            top: 0;
+            img {
+                width: 1.25rem;
+                height: 0.975rem;
+            }
+        }
+        // 筛选
+        .filter {
+            height: 1.0rem;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            >ul {
+                >li {
+                    float: left;
+                    width: 33.33%;
+                    text-align: center;
+                    line-height: 1.0rem;
+                    font-size: 0.4rem;
+                    >a {
+                        color: #000;
+                        vertical-align: middle;
+                    }
+                    >i {
+                        vertical-align: middle;
+                        margin-left: 0.125rem;
+                        display: inline-block;
+                        width: 0.6rem;
+                        height: 1.0rem;
+                    }
+                }
+                >li:nth-child(2) {
+                    border-left: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                }
+            }
+        }
+        // 下拉列表
+        .downlist {
+            #shop,
+            #area,
+            #price {
+                position: absolute;
+                top: 1.0rem;
+                left: 0;
+                z-index: 8;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-bottom: none;
+                width: 100%;
+                >ul>li>a {
+                    display: block;
+                    padding-left: 0.25rem;
+                    color: #000;
+                    font-size: 0.4rem;
+                    line-height: 1.0rem;
+                    border-bottom: 1px solid #e0e0e0;
+                }
+            }
+        }
+    }
+    //商品详细信息
+    .gs-product-list {
+        padding: 0.25rem 0;
+        >ul>li {
+            float: left;
+            width: 50%;
+            padding: 0.125rem;
+            a {
+                display: block;
+                width: 100%;
+                background-color: #fff;
+                text-align: center;
+                padding: 0.125rem;
+                transition: all 1s;
+                >img {
+                    width: 4.35rem;
+                    height: 4.35rem;
+                    display: inline-block;
+                }
+                >.title {
+                    text-align: left;
+                    font-size: 0.3rem;
+                    line-height: 0.35rem;
+                    padding: 0.125rem;
+                    color: #000;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                >.other {
+                    padding: 0.125rem 0;
+                    >.price {
+                        color: #f8601d;
+                        font-size: 0.5rem;
+                        font-weight: bold;
+                    }
+                    >.btn {
+                        font-size: 0.35rem;
+                        padding: 0.1rem 0.25rem;
+                        color: #fff;
+                        background-color: @mainColor;
+                    }
+                }
+            }
+            a:hover {
+                box-shadow: 0 5px 10px #999;
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+#gotop {
+    position: fixed;
+    z-index: 999;
+    bottom: 30px;
+    right: 8px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 20px;
+    color:white;
+    opacity: 0.8;
+    background-color:@mainColor;
+
+}

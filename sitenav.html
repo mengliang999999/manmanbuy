@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="IE=edge" http-equiv="x-ua-compatible">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>商场导航--慢慢买</title>
+        <!-- rem改变HTML字体大小 -->
+        <script src="./lib/rem/rem1.js"></script>
+        <!-- bootstraps css -->
+        <link rel="shortcut icon" href="./images/favicon.ico">
+        <link rel="stylesheet" href="./css/m-base.css">
+        <link rel="stylesheet" href="./css/hqcommon.css">
+        <link rel="stylesheet" href="./css/sitenav.css">
+        <!-- 响应式布局兼容 -->
+        <!--[if lt IE 9]>
+            <script src="./lib/html5shiv/html5shiv.min.js"></script>
+            <script src="./lib/respond/"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- 头部 header start -->
+        <header id="header" class="header">
+            <div class="head">
+                <div class="back fl">
+                    <a href="index.html" class="icon-back">
+                        <img src="./images/icon-leftarrow.png" alt="">
+                    </a>
+                </div>
+                <div class="home fr">
+                    <a href="http://m.manmanbuy.com/?o=download"></a>
+                </div>
+                <h1>商场导航</h1>
+            </div>         
+        </header>
+        <!-- 头部 header end -->
+        <!-- 主体区域 main start -->
+        <main class="site-nav">
+            <div class="link">
+                <img class="active" src="./images/jiazai.gif" alt="" style="width:6.25rem;display:inline-block">
+                <img class="error" src="./images/error.jpg" alt="" style="width:10.0rem;display:none">
+                <script type="text/html" id="linkTmp">
+                    {{each result as value i}}
+                        <a href="{{value.navHref}}" target="_blank">
+                            <img src="{{value.navImg}}" alt="">
+                            {{value.navTitle}}
+                        </a>
+                    {{/each}}
+                </script>
+            </div>
+        </main>
+        <!-- 主体区域 main end -->
+        <!-- 右侧固定app下载 start-->
+        <div class="fixedapp">
+            <a href="http://m.manmanbuy.com/?o=download">
+                <img src="images/app-down.png" alt="app下载"/>
+            </a>
+        </div>
+        <!-- 右侧固定app下载 end-->
+        <!-- 底部 footer start -->
+        <footer class="footer">
+            <div class="footer-top clearfix">
+                <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+                <a href="http://m.manmanbuy.com/reg.aspx">注册</a>
+                <a href="#">
+                    <img src="./images/footer-top.jpg" alt="">
+                    返回顶部
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>
+                    <a href="http://m.manmanbuy.com/?o=download">手机APP下载</a>
+                    <a href="m.manmanbuy.com">慢慢买手机版</a>
+                     -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com  
+                </p>
+            </div>
+        </footer>
+        <!-- 底部 footer end -->
+    </body>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/template/template.js"></script>
+    <script src="./js/sitenav.js"></script>
+</html>

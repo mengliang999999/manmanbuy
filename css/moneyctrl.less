@@ -1,0 +1,235 @@
+.ManManBuy {
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+//遮罩
+.cover {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    .load-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -80%);
+        img {
+            width: 8rem;
+        }
+    }
+}
+
+@colors: #FF841D;
+// 頭部start
+header {
+    height: 2.2rem;
+    background: @colors;
+    .row {
+        .back-index {
+            width: 15%;
+            height: 2.2rem;
+            float: left;
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 2.2rem;
+                color: #fff;
+                font-size: 0.9rem;
+            }
+        }
+        .discount {
+            width: 70%;
+            height: 2.2rem;
+            float: left;
+            h1 {
+                text-align: center;
+                line-height: 1.8rem;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+        .app1-down {
+            width: 15%;
+            height: 2.2rem;
+            float: left;
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 1.7rem;
+                    height: 1.7rem;
+                    margin-top: 0.25rem;
+                }
+            }
+        }
+    }
+}
+
+// 商品start
+.main {
+    margin-top: 0.8rem;
+    padding: 0 0.3rem;
+    .media-left {
+        img {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+    .media-body {
+        h4 {
+            font-size: 16px;
+            color: #333;
+            line-height: 20px;
+            span {
+                color: @colors;
+            }
+        }
+        .other {
+            color: #a1a1a1;
+            #talk {
+                width:12px;
+                height: 12px;
+            }
+            em {
+                margin-top: -0.15rem;
+                margin-left: 0.15rem;
+            }
+        }
+    }
+}
+
+.media {
+    >a {
+        display: block;
+        width: 100%;
+        height: 5rem;
+    }
+}
+
+// 商品end
+// page
+.page {
+    margin: 1.3rem 0;
+    padding: 0 0.3rem;
+    a {
+        display: block;
+        width: 4.2rem;
+        height: 1.65rem;
+        line-height: 1.65rem;
+        font-size: 0.7rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: #d4d4d4;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+        background: -moz-linear-gradient(top, #f1f1f1, #d4d4d4);
+        background: -o-linear-gradient(top, #f1f1f1, #d4d4d4);
+        border-bottom: 1px solid #bababa;
+        box-shadow: 0 0 1px #666;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        text-align: center;
+        color: #000;
+    }
+    .sel {
+        width: 6.4rem;
+        height: 1.6rem;
+        line-height: 1.6rem;
+        padding-left: 2rem;
+        text-align: center;
+        border: 1px solid #bababa;
+        font-size: 0.8rem;
+        float: left;
+        margin-left: 0.28rem;
+    }
+}
+
+// page
+//发表评论end
+.backIndex {
+    width: 100%;
+    height: 1.9rem;
+    line-height: 1.9rem;
+    text-align: left;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+    background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+    background: -o-linear-gradient(top, #ffffff, #ebebeb);
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    padding-left: 0.5rem;
+    >a {
+        color: #000;
+        display: block;
+        font-size: 0.7rem;
+    }
+    span {
+        color: #000;
+        font-size: 0.7rem;
+    }
+}
+
+// 登录注册start
+.member {
+    // margin-top: 5rem;
+    >table {
+        border: none;
+        margin: 0;
+        background: #EFEFEF;
+        tr {
+            td {
+                text-align: center;
+                font-size: 14px;
+                padding: 0!important;
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding: 0.4rem;
+                    color: #5a5a5a;
+                }
+            }
+            .login {
+                border-left: none;
+            }
+            .back {
+                border-right: none;
+            }
+        }
+    }
+}
+
+// 登录注册end
+//页尾satrt
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #EFEFEF;
+}
+
+// 页尾end
+// app下载satrt
+.app-down {
+    width: 3rem;
+    height: 3.35rem;
+    position: fixed;
+    right: 0;
+    bottom: 1.5rem;
+    z-index: 1000;
+}
+
+// app下载end
